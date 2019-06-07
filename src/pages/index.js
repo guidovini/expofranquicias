@@ -7,7 +7,7 @@ import FranchiseList from "../components/franchiseList"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Franquicias Disponibles</h1>
+    <h2>Franquicias Disponibles</h2>
     <FranchiseList />
   </Layout>
 )
