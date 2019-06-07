@@ -4,20 +4,11 @@ import React from 'react'
 
 import Navbar from './navbar'
 
+import HeaderStyles from './header.module.scss'
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      backgroundColor: `#5386e4`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1200,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header className={HeaderStyles.header}>
+    <div className={HeaderStyles.headerRight}>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -29,7 +20,9 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+    </div>
 
+    <div className={HeaderStyles.headerLeft}>
       <Navbar />
     </div>
   </header>
