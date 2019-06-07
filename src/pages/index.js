@@ -1,14 +1,14 @@
-import React from "react"
+import React from 'react'
+import { Link } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import FranchiseList from "../components/franchiseList"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h2>Franquicias Disponibles</h2>
-    <FranchiseList />
+    <h2>Pagina web para encontrar tus franquicias preferidas!</h2>
+    <Link to="/franquicias-disponibles">Buscar Franquicias</Link>
   </Layout>
 )
 
