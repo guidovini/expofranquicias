@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Guido Santillan <info@guidosantillan.com>",
   "dependencies": {
+    "bulma": "^0.7.5",
     "gatsby": "^2.8.5",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
