@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Image from './image'
+import Logo from './logo'
 
 import franchiseItemStyles from './franchiseItem.module.scss'
 
@@ -23,7 +23,7 @@ const Franchise = ({ franchise }) => {
   return (
     <div className={franchiseItemStyles.container}>
       <div className={franchiseItemStyles.image}>
-        <Image />
+        <Logo imgName={`${name}.jpg`} />
       </div>
 
       <div className={franchiseItemStyles.data}>
@@ -77,7 +77,7 @@ const Franchise = ({ franchise }) => {
           <h4 className={franchiseItemStyles.fieldTitle}>Pais de Origen:</h4>
           <img
             className={franchiseItemStyles.flag}
-            src={require(`../assets/${countryOrigin}.png`)}
+            src={require(`../assets/flags/${countryOrigin}.png`)}
             alt={`${countryOrigin} flag`}
             title={countryOrigin}
           />
