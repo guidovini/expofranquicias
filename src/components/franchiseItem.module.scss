@@ -3,10 +3,9 @@
 .container {
   margin-bottom: 2.5rem;
   margin-right: 2.5rem;
-  padding: 1.25rem;
   background-color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   // flex-grow: 1;
 
   box-shadow: 0 1rem 2rem rgba(#000, 0.15);
@@ -20,11 +19,12 @@
 }
 
 .image {
-  max-width: 240px;
-  margin-bottom: 1.2rem;
+  min-width: 338.5px;
 }
 
 .data {
+  padding: 1.25rem;
+
   display: flex;
   flex-direction: column;
 }

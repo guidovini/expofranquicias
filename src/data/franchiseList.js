@@ -29,7 +29,7 @@ const franchises = [
     sizeUnits: 'metros cuadrados',
     investment: '90.000',
     countryAvailability: 'Todo el Ecuador',
-    countryOrigin: 'Colombia',
+    countryOrigin: 'Estados Unidos',
     description: 'Esta es la descripcion de Ecuafranquicias',
   },
   {
@@ -40,7 +40,7 @@ const franchises = [
     sizeUnits: 'metros cuadrados',
     investment: '50.000',
     countryAvailability: 'Todo el Ecuador',
-    countryOrigin: 'Argentina',
+    countryOrigin: 'Mexico',
     description: 'Esta es la descripcion de Ecuafranquicias',
   },
   {
