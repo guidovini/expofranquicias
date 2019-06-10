@@ -4,16 +4,22 @@ import Image from './image'
 
 import franchiseItemStyles from './franchiseItem.module.scss'
 
-const Franchise = ({
-  name,
-  concept,
-  category,
-  size,
-  sizeUnits,
-  investment,
-  countryAvailability,
-  countryOrigin,
-}) => {
+const Franchise = ({ franchise }) => {
+  const {
+    name,
+    concept,
+    category,
+    size,
+    sizeUnits,
+    yearsOperation,
+    locations,
+    investment,
+    investmentLocationOnly,
+    roiTime,
+    countryAvailability,
+    countryOrigin,
+  } = franchise
+
   return (
     <div className={franchiseItemStyles.container}>
       <div className={franchiseItemStyles.image}>
@@ -24,17 +30,39 @@ const Franchise = ({
         <h3 className="title is-4 has-text-grey-dark">{name}</h3>
         <p className="subtitle is-6 has-text-grey-dark">{concept}</p>
 
-        <div className={franchiseItemStyles.field}>
-          <h4 className={franchiseItemStyles.fieldTitle}>Categoria:</h4>
-          <p className={franchiseItemStyles.fieldContent}>{category}</p>
-        </div>
+        {category && (
+          <div className={franchiseItemStyles.field}>
+            <h4 className={franchiseItemStyles.fieldTitle}>Categoria:</h4>
+            <p className={franchiseItemStyles.fieldContent}>{category}</p>
+          </div>
+        )}
 
-        <div className={franchiseItemStyles.field}>
-          <h4 className={franchiseItemStyles.fieldTitle}>Tamano:</h4>
-          <p className={franchiseItemStyles.fieldContent}>
-            {size} {sizeUnits}
-          </p>
-        </div>
+        {yearsOperation && (
+          <div className={franchiseItemStyles.field}>
+            <h4 className={franchiseItemStyles.fieldTitle}>
+              Años de Operacion:
+            </h4>
+            <p className={franchiseItemStyles.fieldContent}>{yearsOperation}</p>
+          </div>
+        )}
+
+        {locations && (
+          <div className={franchiseItemStyles.field}>
+            <h4 className={franchiseItemStyles.fieldTitle}>
+              Numero de Locales:
+            </h4>
+            <p className={franchiseItemStyles.fieldContent}>{locations}</p>
+          </div>
+        )}
+
+        {size && (
+          <div className={franchiseItemStyles.field}>
+            <h4 className={franchiseItemStyles.fieldTitle}>Tamano:</h4>
+            <p className={franchiseItemStyles.fieldContent}>
+              {size} {sizeUnits}
+            </p>
+          </div>
+        )}
 
         <div className={franchiseItemStyles.field}>
           <h4 className={franchiseItemStyles.fieldTitle}>
@@ -47,7 +75,6 @@ const Franchise = ({
 
         <div className={franchiseItemStyles.field}>
           <h4 className={franchiseItemStyles.fieldTitle}>Pais de Origen:</h4>
-
           <img
             className={franchiseItemStyles.flag}
             src={require(`../assets/${countryOrigin}.png`)}
@@ -56,12 +83,37 @@ const Franchise = ({
           />
         </div>
 
+        {roiTime && (
+          <div className={franchiseItemStyles.field}>
+            <h4 className={franchiseItemStyles.fieldTitle}>
+              Tiempo Retorno de Inversion:
+            </h4>
+            <p className={franchiseItemStyles.fieldContent}>{roiTime}</p>
+          </div>
+        )}
+
         <div
           className={franchiseItemStyles.field}
           style={{ justifyContent: 'center', flexDirection: 'column' }}
         >
+          <h4 className={franchiseItemStyles.priceLocationsTitle}>
+            Inversion Montaje del Local
+          </h4>
+          <p className={franchiseItemStyles.priceLocations}>
+            <span>$ </span>
+            {investmentLocationOnly}
+          </p>
+        </div>
+
+        <div
+          className={franchiseItemStyles.field}
+          style={{
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
           <h4 className={franchiseItemStyles.priceTitle}>
-            Inversion Aproximada
+            Inversion Aproximada Desde
           </h4>
           <p className={franchiseItemStyles.price}>
             <span>$ </span>

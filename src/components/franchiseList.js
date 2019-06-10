@@ -9,28 +9,13 @@ const FranchiseList = () => {
   return (
     <div className={franchiseListStyles.column}>
       {franchises.map(franchise => {
-        const {
-          name,
-          concept,
-          category,
-          size,
-          sizeUnits,
-          investment,
-          countryAvailability,
-          countryOrigin,
-        } = franchise
         return (
-          <FranchiseItem
-            name={name}
-            concept={concept}
-            category={category}
-            size={size}
-            sizeUnits={sizeUnits}
-            investment={investment}
-            countryAvailability={countryAvailability}
-            countryOrigin={countryOrigin}
-            key={name}
-          />
+          franchise.investment && (
+            <FranchiseItem
+              franchise={franchise}
+              key={`${franchise.name} + ${franchise.investment}`}
+            />
+          )
         )
       })}
     </div>
