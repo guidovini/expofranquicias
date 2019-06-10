@@ -7,8 +7,12 @@ import SEO from '../components/seo'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h2>Pagina web para encontrar tus franquicias preferidas!</h2>
-    <Link to="/franquicias-disponibles">Buscar Franquicias</Link>
+    <h2 className="title is-4 has-text-grey-dark">
+      Pagina Web para encontrar Franquicias Disponibles en Latinoamerica
+    </h2>
+    <Link to="/franquicias-disponibles" className="button is-link">
+      Buscar Franquicias
+    </Link>
   </Layout>
 )
 

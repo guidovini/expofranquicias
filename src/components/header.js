@@ -18,7 +18,9 @@ const Header = ({ siteTitle }) => (
 
     <div className="navbar-brand">
       <Link to="/" className="navbar-item">
-        <header className="title is-4 has-text-light">{siteTitle}</header>
+        <header className="title is-4 has-text-light has-text-weight-light">
+          {siteTitle}
+        </header>
       </Link>
 
       <a

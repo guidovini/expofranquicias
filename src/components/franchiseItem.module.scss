@@ -3,7 +3,7 @@
 .container {
   margin-bottom: 2.5rem;
   margin-right: 2.5rem;
-  padding: 1.2rem;
+  padding: 1.25rem;
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -37,10 +37,11 @@
 
 .field-title {
   margin-right: 0.6rem;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .field-content {
+  font-weight: 400;
 }
 
 .flag {

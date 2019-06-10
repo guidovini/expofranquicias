@@ -1,9 +1,6 @@
 import React from 'react'
 
 import Image from './image'
-import Ecuador from '../assets/Ecuador.png'
-import Colombia from '../assets/Colombia.png'
-import Argentina from '../assets/Argentina.png'
 
 import franchiseItemStyles from './franchiseItem.module.scss'
 

@@ -3,6 +3,9 @@
  * with Gatsby's StaticQuery component
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
+ *
+ * Footer conf
+ * https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
  */
 
 import React from 'react'
@@ -25,13 +28,32 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <section className="section">
-          <main className="container is-fluid">{children}</main>
-          <footer className="footer">
+        <section
+          className="section"
+          style={{
+            position: 'relative',
+            minHeight: 'calc( 100vh - 2.5rem - 12px )',
+          }}
+        >
+          <main
+            className="container is-fluid"
+            style={{ paddingBottom: '2.5rem' }}
+          >
+            {children}
+          </main>
+          <footer
+            className="footer"
+            style={{
+              marginRigth: '1rem',
+              position: 'absolute',
+              bottom: '0',
+              width: '100%',
+              paddingBottom: '2.5rem',
+            }}
+          >
             <p>
-              Copyright © {new Date().getFullYear()} | Expofranquicias Ecuador |
-              Todos los derechos reservados. | Aviso Legal | Built with {` `}{' '}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
+              Copyright © {new Date().getFullYear()} Expofranquicias Ecuador.
+              Todos los derechos reservados. Aviso Legal
             </p>
           </footer>
         </section>

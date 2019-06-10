@@ -8,7 +8,9 @@ const FranquiciasDisponibles = () => {
   return (
     <Layout>
       <SEO title="Franquicias Disponibles en Ecuador" />
-      <h2 className="title is-3 has-text-centered">Franquicias Disponibles</h2>
+      <h2 className="title is-2 has-text-centered has-text-grey-dark">
+        Franquicias Disponibles
+      </h2>
       <FranchiseList />
     </Layout>
   )
