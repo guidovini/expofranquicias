@@ -94,19 +94,6 @@ const Franchise = ({ franchise }) => {
 
         <div
           className={franchiseItemStyles.field}
-          style={{ justifyContent: 'center', flexDirection: 'column' }}
-        >
-          <h4 className={franchiseItemStyles.priceLocationsTitle}>
-            Inversion Montaje del Local
-          </h4>
-          <p className={franchiseItemStyles.priceLocations}>
-            <span>$ </span>
-            {investmentLocationOnly}
-          </p>
-        </div>
-
-        <div
-          className={franchiseItemStyles.field}
           style={{
             justifyContent: 'center',
             flexDirection: 'column',
@@ -124,6 +111,19 @@ const Franchise = ({ franchise }) => {
     </div>
   )
 }
+
+// <div
+// className={franchiseItemStyles.field}
+// style={{ justifyContent: 'center', flexDirection: 'column' }}
+// >
+// <h4 className={franchiseItemStyles.priceLocationsTitle}>
+//   Inversion Montaje del Local
+// </h4>
+// <p className={franchiseItemStyles.priceLocations}>
+//   <span>$ </span>
+//   {investmentLocationOnly}
+// </p>
+// </div>
 
 // <p className={franchiseItemStyles.fieldContent}>
 // {countryOrigin} &nbsp;
