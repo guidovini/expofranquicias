@@ -57,8 +57,8 @@ const Header = ({ siteTitle }) => (
         </div>
 
         <Link to="/franquicias-disponibles" className="navbar-item is-size-6">
-          <span class="icon">
-            <i class="fas fa-briefcase"></i>
+          <span className="icon">
+            <i className="fas fa-briefcase"></i>
           </span>
           <span>&nbsp;</span>
           <p>Franquicias Disponibles</p>

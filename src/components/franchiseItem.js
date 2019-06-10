@@ -1,6 +1,9 @@
 import React from 'react'
 
 import Image from './image'
+import Ecuador from '../assets/Ecuador.png'
+import Colombia from '../assets/Colombia.png'
+import Argentina from '../assets/Argentina.png'
 
 import franchiseItemStyles from './franchiseItem.module.scss'
 
@@ -21,24 +24,17 @@ const Franchise = ({
       </div>
 
       <div className={franchiseItemStyles.data}>
-        <div className={franchiseItemStyles.field}>
-          <h4 className={franchiseItemStyles.fieldTitle}>Nombre:</h4>
-          <p>{name}</p>
-        </div>
-
-        <div className={franchiseItemStyles.field}>
-          <h4 className={franchiseItemStyles.fieldTitle}>Concepto:</h4>
-          <p>{concept}</p>
-        </div>
+        <h3 className="title is-4 has-text-grey-dark">{name}</h3>
+        <p className="subtitle is-6 has-text-grey-dark">{concept}</p>
 
         <div className={franchiseItemStyles.field}>
           <h4 className={franchiseItemStyles.fieldTitle}>Categoria:</h4>
-          <p>{category}</p>
+          <p className={franchiseItemStyles.fieldContent}>{category}</p>
         </div>
 
         <div className={franchiseItemStyles.field}>
           <h4 className={franchiseItemStyles.fieldTitle}>Tamano:</h4>
-          <p>
+          <p className={franchiseItemStyles.fieldContent}>
             {size} {sizeUnits}
           </p>
         </div>
@@ -47,19 +43,29 @@ const Franchise = ({
           <h4 className={franchiseItemStyles.fieldTitle}>
             Disponibilidad Territorial:
           </h4>
-          <p>{countryAvailability}</p>
+          <p className={franchiseItemStyles.fieldContent}>
+            {countryAvailability}
+          </p>
         </div>
 
         <div className={franchiseItemStyles.field}>
           <h4 className={franchiseItemStyles.fieldTitle}>Pais de Origen:</h4>
-          <p>{countryOrigin}</p>
+
+          <img
+            className={franchiseItemStyles.flag}
+            src={require(`../assets/${countryOrigin}.png`)}
+            alt={`${countryOrigin} flag`}
+            title={countryOrigin}
+          />
         </div>
 
         <div
           className={franchiseItemStyles.field}
-          style={{ justifyContent: 'center' }}
+          style={{ justifyContent: 'center', flexDirection: 'column' }}
         >
-          <h4 className={franchiseItemStyles.fieldTitle}>Precio:</h4>
+          <h4 className={franchiseItemStyles.priceTitle}>
+            Inversion Aproximada
+          </h4>
           <p className={franchiseItemStyles.price}>
             <span>$ </span>
             {investment}
@@ -69,5 +75,9 @@ const Franchise = ({
     </div>
   )
 }
+
+// <p className={franchiseItemStyles.fieldContent}>
+// {countryOrigin} &nbsp;
+// </p>
 
 export default Franchise
