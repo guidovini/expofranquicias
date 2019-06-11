@@ -32,7 +32,7 @@ const Franchise = ({ franchise }) => {
 
         {category && (
           <div className={franchiseItemStyles.field}>
-            <h4 className={franchiseItemStyles.fieldTitle}>Categoria:</h4>
+            <h4 className={franchiseItemStyles.fieldTitle}>Categoría:</h4>
             <p className={franchiseItemStyles.fieldContent}>{category}</p>
           </div>
         )}
@@ -40,7 +40,7 @@ const Franchise = ({ franchise }) => {
         {yearsOperation && (
           <div className={franchiseItemStyles.field}>
             <h4 className={franchiseItemStyles.fieldTitle}>
-              Años de Operacion:
+              Años de Operación:
             </h4>
             <p className={franchiseItemStyles.fieldContent}>{yearsOperation}</p>
           </div>
@@ -49,7 +49,7 @@ const Franchise = ({ franchise }) => {
         {locations && (
           <div className={franchiseItemStyles.field}>
             <h4 className={franchiseItemStyles.fieldTitle}>
-              Numero de Locales:
+              Número de Locales:
             </h4>
             <p className={franchiseItemStyles.fieldContent}>{locations}</p>
           </div>
@@ -57,7 +57,9 @@ const Franchise = ({ franchise }) => {
 
         {size && (
           <div className={franchiseItemStyles.field}>
-            <h4 className={franchiseItemStyles.fieldTitle}>Tamano:</h4>
+            <h4 className={franchiseItemStyles.fieldTitle}>
+              Tamaño del local:
+            </h4>
             <p className={franchiseItemStyles.fieldContent}>
               {size} {sizeUnits}
             </p>
@@ -74,7 +76,7 @@ const Franchise = ({ franchise }) => {
         </div>
 
         <div className={franchiseItemStyles.field}>
-          <h4 className={franchiseItemStyles.fieldTitle}>Pais de Origen:</h4>
+          <h4 className={franchiseItemStyles.fieldTitle}>País de Origen:</h4>
           <img
             className={franchiseItemStyles.flag}
             src={require(`../assets/flags/${countryOrigin}.png`)}
@@ -86,7 +88,7 @@ const Franchise = ({ franchise }) => {
         {roiTime && (
           <div className={franchiseItemStyles.field}>
             <h4 className={franchiseItemStyles.fieldTitle}>
-              Tiempo Retorno de Inversion:
+              Tiempo Retorno de Inversión:
             </h4>
             <p className={franchiseItemStyles.fieldContent}>{roiTime}</p>
           </div>
@@ -102,7 +104,7 @@ const Franchise = ({ franchise }) => {
           }}
         >
           <h4 className={franchiseItemStyles.priceTitle}>
-            Inversion Aproximada Desde
+            Inversión Aproximada Desde
           </h4>
           <p className={franchiseItemStyles.price}>
             <span>$ </span>
