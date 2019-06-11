@@ -32,7 +32,7 @@ const IndexPage = () => (
             >
               <Link
                 to="/franquicias-disponibles"
-                className="button is-large is-link is-outlined"
+                className="button is-large is-link"
               >
                 Buscar Franquicias
               </Link>

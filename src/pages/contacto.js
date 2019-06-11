@@ -33,7 +33,8 @@ const Contacto = () => {
           flexWrap: 'wrap',
           alignItems: 'center',
           justifyContent: 'center',
-          marginTop: '1rem',
+          marginTop: '3rem',
+          marginBottom: '5rem',
         }}
       >
         <p>Un servicio de: </p>

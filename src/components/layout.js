@@ -13,6 +13,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './footer'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -41,27 +42,7 @@ const Layout = ({ children }) => (
           >
             {children}
           </main>
-          <footer
-            className="footer"
-            style={{
-              marginRigth: '1rem',
-              position: 'absolute',
-              bottom: '0',
-              width: '90%',
-              paddingBottom: '2.5rem',
-            }}
-          >
-            <p>
-              Copyright © {new Date().getFullYear()} Expofranquicias Ecuador.
-              Todos los derechos reservados.&nbsp;
-              <span>
-                Un servicio de{' '}
-                <a href="http://www.ecuafranquicias.com" target="_blank">
-                  Ecuafranquicias
-                </a>
-              </span>
-            </p>
-          </footer>
+          <Footer />
         </section>
       </>
     )}
