@@ -27,7 +27,7 @@
     margin-right: 0;
   }
 
-  @media screen and (max-width: 80em) {
+  @media only screen and (max-width: 80em) {
     // max 1280
     margin-bottom: 2rem;
     margin-right: 2rem;
@@ -42,18 +42,21 @@
     }
   }
 
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     //max 900
     margin-bottom: 3rem;
     margin-right: 0;
     width: 30rem;
 
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
 
-  // @media screen and (max-width: 37.5em) {
+  // @media only screen and (max-width: 37.5em) {
   //   //max 600
   //   margin-bottom: 3rem;
   //   width: 30rem;

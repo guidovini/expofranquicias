@@ -47,7 +47,7 @@ const Layout = ({ children }) => (
               marginRigth: '1rem',
               position: 'absolute',
               bottom: '0',
-              width: '100%',
+              width: '90%',
               paddingBottom: '2.5rem',
             }}
           >
