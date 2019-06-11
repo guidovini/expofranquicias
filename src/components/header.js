@@ -44,20 +44,6 @@ const Header = ({ siteTitle }) => (
           <p>Inicio</p>
         </Link>
 
-        <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link is-size-6">
-            <p>Info</p>
-          </a>
-
-          <div className="navbar-dropdown">
-            <a className="navbar-item">Acerca de Nosotros</a>
-            <a className="navbar-item">FAQ - Preguntas Frecuentes</a>
-
-            <hr className="navbar-divider" />
-            <a className="navbar-item">Report an issue</a>
-          </div>
-        </div>
-
         <Link to="/franquicias-disponibles" className="navbar-item is-size-6">
           <span className="icon">
             <i className="fas fa-briefcase"></i>
@@ -65,14 +51,28 @@ const Header = ({ siteTitle }) => (
           <span>&nbsp;</span>
           <p>Franquicias Disponibles</p>
         </Link>
-
-        <Link to="/contacto" className=" is-size-6 navbar-item">
-          Contacto
-        </Link>
       </div>
     </div>
   </nav>
 )
+
+// <div className="navbar-item has-dropdown is-hoverable">
+// <a className="navbar-link is-size-6">
+//   <p>Info</p>
+// </a>
+
+// <Link to="/contacto" className=" is-size-6 navbar-item">
+// Contacto
+// </Link>
+
+// <div className="navbar-dropdown">
+//   <a className="navbar-item">Acerca de Nosotros</a>
+//   <a className="navbar-item">FAQ - Preguntas Frecuentes</a>
+
+//   <hr className="navbar-divider" />
+//   <a className="navbar-item">Report an issue</a>
+// </div>
+// </div>
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
