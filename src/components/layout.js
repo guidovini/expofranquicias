@@ -37,7 +37,7 @@ const Layout = ({ children }) => (
         >
           <main
             className="container is-fluid"
-            style={{ paddingBottom: '2.5rem' }}
+            style={{ paddingBottom: '2.5rem', marginBottom: '2rem' }}
           >
             {children}
           </main>
@@ -53,7 +53,13 @@ const Layout = ({ children }) => (
           >
             <p>
               Copyright © {new Date().getFullYear()} Expofranquicias Ecuador.
-              Todos los derechos reservados. Aviso Legal
+              Todos los derechos reservados.&nbsp;
+              <span>
+                Un servicio de{' '}
+                <a href="http://www.ecuafranquicias.com" target="_blank">
+                  Ecuafranquicias
+                </a>
+              </span>
             </p>
           </footer>
         </section>

@@ -51,6 +51,10 @@ const Header = ({ siteTitle }) => (
           <span>&nbsp;</span>
           <p>Franquicias Disponibles</p>
         </Link>
+
+        <Link to="/contacto" className=" is-size-6 navbar-item">
+          Contacto
+        </Link>
       </div>
     </div>
   </nav>
@@ -60,10 +64,6 @@ const Header = ({ siteTitle }) => (
 // <a className="navbar-link is-size-6">
 //   <p>Info</p>
 // </a>
-
-// <Link to="/contacto" className=" is-size-6 navbar-item">
-// Contacto
-// </Link>
 
 // <div className="navbar-dropdown">
 //   <a className="navbar-item">Acerca de Nosotros</a>
