@@ -1,64 +1,81 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+// Navbar solution
 
-const Header = ({ siteTitle }) => (
-  <nav
-    className="navbar is-link"
-    role="navigation"
-    aria-label="main navigation"
-  >
-    <Helmet>
-      <script
-        defer
-        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-      ></script>
-    </Helmet>
+class Header extends Component {
+  state = {
+    isActive: false,
+  }
 
-    <div className="navbar-brand">
-      <Link to="/" className="navbar-item">
-        <header className="title is-4 has-text-light has-text-weight-light">
-          {siteTitle}
-        </header>
-      </Link>
+  toggleNav = () => {
+    this.setState(prevState => ({
+      isActive: !prevState.isActive,
+    }))
+  }
 
-      <a
-        role="button"
-        className="navbar-burger burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarBasicExample"
+  render() {
+    return (
+      <nav
+        className="navbar is-link"
+        role="navigation"
+        aria-label="main navigation"
       >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+        <Helmet>
+          <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+          ></script>
+        </Helmet>
 
-    <div id="navbarBasicExample" className="navbar-menu">
-      <div className="navbar-start"></div>
+        <div className="navbar-brand">
+          <Link to="/" className="navbar-item">
+            <header className="title is-4 has-text-light has-text-weight-light">
+              Expofranquicias Ecuador
+            </header>
+          </Link>
 
-      <div className="navbar-end">
-        <Link to="/" className="navbar-item is-size-6">
-          <p>Inicio</p>
-        </Link>
+          <div className="navbar-burger burger" onClick={this.toggleNav}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
 
-        <Link to="/franquicias-disponibles" className="navbar-item is-size-6">
-          <span className="icon">
-            <i className="fas fa-briefcase"></i>
-          </span>
-          <span>&nbsp;</span>
-          <p>Franquicias Disponibles</p>
-        </Link>
+        <div
+          className={
+            this.state.isActive ? 'navbar-menu is-active' : 'navbar-menu'
+          }
+        >
+          <div className="navbar-start"></div>
 
-        <Link to="/contacto" className=" is-size-6 navbar-item">
-          Contacto
-        </Link>
-      </div>
-    </div>
-  </nav>
-)
+          <div className="navbar-end">
+            <Link to="/" className="navbar-item is-size-6">
+              <p>Inicio</p>
+            </Link>
+
+            <Link
+              to="/franquicias-disponibles"
+              className="navbar-item is-size-6"
+            >
+              <span className="icon">
+                <i className="fas fa-briefcase"></i>
+              </span>
+              <span>&nbsp;</span>
+              <span>Franquicias Disponibles</span>
+            </Link>
+
+            <Link to="/contacto" className="navbar-item is-size-6">
+              Contacto
+            </Link>
+          </div>
+        </div>
+      </nav>
+    )
+  }
+}
+
+export default Header
 
 // <div className="navbar-item has-dropdown is-hoverable">
 // <a className="navbar-link is-size-6">
@@ -73,13 +90,3 @@ const Header = ({ siteTitle }) => (
 //   <a className="navbar-item">Report an issue</a>
 // </div>
 // </div>
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
