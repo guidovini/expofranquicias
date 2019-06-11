@@ -41,7 +41,7 @@ const IndexPage = () => (
                 className="button is-large is-dark is-outlined"
                 style={{ flexGrow: '0' }}
               >
-                Mas Informacion
+                Más Información
               </Link>
             </div>
 

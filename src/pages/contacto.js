@@ -11,7 +11,7 @@ const Contacto = () => {
       <SEO title="Contacto" />
       <h2 className="title is-2 has-text-centered">Contacto</h2>
       <p className={ContactoStyles.textCentered}>
-        Para obtener mas informacion, comuniquese con nosotros.
+        Para obtener mas información, comuníquese con nosotros.
       </p>
       <div className="column is-6 is-offset-3">
         <p className={ContactoStyles.text}>
