@@ -63,16 +63,20 @@
   // }
 }
 
-.image {
-  // max-width: 21rem;
-  margin-bottom: 1.5rem;
-  // min-height: 16.5rem;
-  // min-width: 200px;
+.image-box {
+  margin-bottom: 1.25rem;
+  min-height: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .data {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .field {

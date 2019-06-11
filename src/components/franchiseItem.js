@@ -22,7 +22,7 @@ const Franchise = ({ franchise }) => {
 
   return (
     <div className={franchiseItemStyles.container}>
-      <div className={franchiseItemStyles.image}>
+      <div className={franchiseItemStyles.imageBox}>
         <Logo imgName={`${name}.jpg`} />
       </div>
 
@@ -95,8 +95,10 @@ const Franchise = ({ franchise }) => {
         <div
           className={franchiseItemStyles.field}
           style={{
-            justifyContent: 'center',
             flexDirection: 'column',
+            justifyContent: 'flex-end',
+            alignContent: 'flex-end',
+            flexGrow: '1',
           }}
         >
           <h4 className={franchiseItemStyles.priceTitle}>
