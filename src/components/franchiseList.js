@@ -31,7 +31,37 @@ class FranchiseList extends Component {
     })
   }
 
+  franchiseSelector = (franchises, orderBy, filterBy, searchBy) => {
+    return franchises
+      .filter(franchise => {
+        return franchise.name.toLowerCase().includes(searchBy.toLowerCase())
+      })
+      .filter(franchise => {
+        if (filterBy === 'all') {
+          return franchise
+        }
+        if (franchise.countryOrigin === filterBy) {
+          return franchise.countryOrigin === filterBy
+        }
+      })
+      .sort((a, b) => {
+        if (orderBy === 'lower-price') return a.investment - b.investment
+        if (orderBy === 'higher-price') return b.investment - a.investment
+        if (orderBy === 'alpha') return a.name - b.name
+      })
+
+    // return franchises
+  }
+
   render() {
+    const { orderBy, filterBy, searchBy } = this.state
+    const newFranchises = this.franchiseSelector(
+      franchises,
+      orderBy,
+      filterBy,
+      searchBy
+    )
+
     return (
       <div>
         <ControlBar
@@ -39,12 +69,12 @@ class FranchiseList extends Component {
           handleOrder={this.handleOrder}
           handleFilter={this.handleFilter}
           handleSearch={this.handleSearch}
-          orderBy={this.state.orderBy}
-          filterBy={this.state.filterBy}
-          searchBy={this.state.searchBy}
+          orderBy={orderBy}
+          filterBy={filterBy}
+          searchBy={searchBy}
         />
         <div className={franchiseListStyles.column}>
-          {franchises.map(franchise => {
+          {newFranchises.map(franchise => {
             return (
               franchise.investment && (
                 <FranchiseItem
