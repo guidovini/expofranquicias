@@ -31,6 +31,10 @@ class FranchiseList extends Component {
     })
   }
 
+  resetControlBar = () => {
+    this.setState({ orderBy: 'alpha', filterBy: 'all', searchBy: '' })
+  }
+
   franchiseSelector = (franchises, orderBy, filterBy, searchBy) => {
     return franchises
       .filter(franchise => {
@@ -78,6 +82,7 @@ class FranchiseList extends Component {
           handleOrder={this.handleOrder}
           handleFilter={this.handleFilter}
           handleSearch={this.handleSearch}
+          resetControlBar={this.resetControlBar}
           orderBy={orderBy}
           filterBy={filterBy}
           searchBy={searchBy}
