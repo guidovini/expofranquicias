@@ -4,42 +4,20 @@ import ControlBarStyles from './controlBar.module.scss'
 
 class ControlBar extends Component {
   componentDidMount() {
-    // ? ComponentDidMount comment
-    // https://stackoverflow.com/questions/53244062/how-to-add-js-to-react-components-in-gatsby
-
-    // The debounce function receives our function as a parameter
-    const debounce = fn => {
-      // This holds the requestAnimationFrame reference, so we can cancel it if we wish
-      let frame
-
-      // The debounce function returns a new function that can receive a variable number of arguments
-      return (...params) => {
-        // If the frame variable has been defined, clear it now, and queue for next frame
-        if (frame) {
-          cancelAnimationFrame(frame)
+    if (
+      'IntersectionObserver' in window &&
+      'IntersectionObserverEntry' in window &&
+      'intersectionRatio' in window.IntersectionObserverEntry.prototype
+    ) {
+      let observer = new IntersectionObserver(entries => {
+        if (entries[0].boundingClientRect.y < 0) {
+          document.body.classList.add('header-not-at-top')
+        } else {
+          document.body.classList.remove('header-not-at-top')
         }
-
-        // Queue our function call for the next frame
-        frame = requestAnimationFrame(() => {
-          // Call our function and pass any params we received
-          fn(...params)
-        })
-      }
+      })
+      observer.observe(document.querySelector('#top-of-site-pixel-anchor'))
     }
-
-    // Reads out the scroll position and stores it in the data attribute
-    // so we can use it in our stylesheets
-    const storeScroll = () => {
-      document.documentElement.dataset.scroll = window.scrollY
-    }
-
-    // Listen for new scroll events, here we debounce our `storeScroll` function
-    document.addEventListener('scroll', debounce(storeScroll), {
-      passive: true,
-    })
-
-    // Update scroll position for first time
-    storeScroll()
   }
 
   orderBySelector = () => {
@@ -94,7 +72,23 @@ class ControlBar extends Component {
 
   render() {
     return (
-      <div className={ControlBarStyles.control}>
+      <div
+        className="control-bar"
+        // style={{
+        //   position: 'relative',
+        //   backgroundColor: '#eee',
+        //   borderRadius: '15px',
+        //   padding: '1rem 0',
+        //   paddingBottom: '0.25rem',
+        //   marginTop: '3rem',
+        //   marginBottom: '2rem',
+        //   display: 'flex',
+        //   flexDirection: 'row',
+        //   justifyContent: 'space-evenly',
+        //   alignItems: 'flex-start',
+        //   flexWrap: 'wrap',
+        // }}
+      >
         <div
           className="field is-horizontal"
           // style={{ flexBasis: '16rem' }}
@@ -137,20 +131,21 @@ class ControlBar extends Component {
           <div className="control is-expandable" style={{ flexBasis: '28rem' }}>
             {this.searchBySelector()}
           </div>
+          <button
+            onClick={e => {
+              e.preventDefault()
+              this.props.resetControlBar()
+            }}
+            className={ControlBarStyles.buttonTrash}
+            // className={'delete is-medium'}
+            title="Reiniciar opciones"
+            // style={{ margin: '5px' }}
+          >
+            <span className="icon">
+              <i className="fas fa-lg fa-trash"></i>
+            </span>
+          </button>
         </div>
-
-        <button
-          onClick={e => {
-            e.preventDefault()
-            this.props.resetControlBar()
-          }}
-          className={ControlBarStyles.button}
-          // className={'delete is-medium'}
-          title="Reiniciar opciones"
-          style={{ margin: '5px' }}
-        >
-          x
-        </button>
       </div>
     )
   }

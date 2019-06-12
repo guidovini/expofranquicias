@@ -1,0 +1,41 @@
+.control-bar {
+  position: relative;
+  background-color: #eee;
+  border-radius: 15px;
+  padding: 1rem 0;
+  padding-bottom: 0.25rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  body.header-not-at-top & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+
+    border-radius: 0px;
+    margin-top: 0;
+    // margin-bottom: 10rem;
+  }
+
+  @at-root {
+    body.header-not-at-top {
+      // IF ACTIVATED CAUSES AN ERROR
+      // padding-top: 44px;
+    }
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    align-items: stretch;
+    // padding: 1rem;
+    // flex-direction: column;
+    // justify-content: stretch;
+  }
+}

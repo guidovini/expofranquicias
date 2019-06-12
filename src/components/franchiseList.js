@@ -78,6 +78,19 @@ class FranchiseList extends Component {
 
     return (
       <div>
+        <div
+          id="top-of-site-pixel-anchor"
+          style={{
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+            // IF ACTIVATE CAUSES AN ERROR
+            // top: '20rem',
+            // top: '120vh',
+            // top: '20rem',
+            left: '0',
+          }}
+        ></div>
         <ControlBar
           countries={countryList}
           handleOrder={this.handleOrder}
