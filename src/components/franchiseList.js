@@ -45,12 +45,21 @@ class FranchiseList extends Component {
         }
       })
       .sort((a, b) => {
+        const x = a.name.toLowerCase()
+        const y = b.name.toLowerCase()
+        if (orderBy === 'alpha') {
+          if (x < y) {
+            return -1
+          }
+          if (x > y) {
+            return 1
+          }
+          return 0
+        }
+
         if (orderBy === 'lower-price') return a.investment - b.investment
         if (orderBy === 'higher-price') return b.investment - a.investment
-        if (orderBy === 'alpha') return a.name - b.name
       })
-
-    // return franchises
   }
 
   render() {

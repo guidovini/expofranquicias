@@ -475,7 +475,7 @@ const franchises = [
     countryOrigin: 'Ecuador',
   },
   {
-    name: 'Mongo´s',
+    name: 'Mongos',
     concept: 'Resto - Bar - Karaoke',
     size: '200 - 250 m2',
     yearsOperation: '17',
