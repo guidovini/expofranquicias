@@ -39,6 +39,9 @@ class FranchiseList extends Component {
           handleOrder={this.handleOrder}
           handleFilter={this.handleFilter}
           handleSearch={this.handleSearch}
+          orderBy={this.state.orderBy}
+          filterBy={this.state.filterBy}
+          searchBy={this.state.searchBy}
         />
         <div className={franchiseListStyles.column}>
           {franchises.map(franchise => {

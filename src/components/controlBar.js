@@ -12,12 +12,12 @@ class ControlBar extends Component {
   }
 
   handleSearch = e => {
-    this.props.handleChange(e.target.value)
+    this.props.handleSearch(e.target.value)
   }
 
   filterByCountrySelector = countries => {
     return (
-      <select value={this.state.filterBy} onChange={this.handleFilter}>
+      <select value={this.props.filterBy} onChange={this.handleFilter}>
         <option value="all">Todos</option>
         {countries.map(country => {
           return (
@@ -36,7 +36,7 @@ class ControlBar extends Component {
         <form>
           <label>
             Ordenar:
-            <select value={this.state.orderBy} onChange={this.handleOrder}>
+            <select value={this.props.orderBy} onChange={this.handleOrder}>
               <option value="alpha">Alfabeticamente</option>
               <option value="lower-price">Menor Precio</option>
               <option value="higher-price">Mayor Precio</option>
@@ -52,7 +52,7 @@ class ControlBar extends Component {
             Buscar:
             <input
               type="text"
-              value={this.state.searchBy}
+              value={this.props.searchBy}
               onChange={this.handleSearch}
             />
           </label>
