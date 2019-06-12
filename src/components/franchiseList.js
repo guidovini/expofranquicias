@@ -32,7 +32,8 @@ class FranchiseList extends Component {
   }
 
   resetControlBar = () => {
-    this.setState({ orderBy: 'alpha', filterBy: 'all', searchBy: '' })
+    // this.setState({ orderBy: 'alpha', filterBy: 'all', searchBy: '' })
+    this.setState({ searchBy: '' })
   }
 
   franchiseSelector = (franchises, orderBy, filterBy, searchBy) => {
