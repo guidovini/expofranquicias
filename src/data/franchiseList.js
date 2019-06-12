@@ -561,4 +561,16 @@ const franchises = [
   },
 ]
 
-export default franchises
+const list = []
+franchises.map(franchise => {
+  return list.push(franchise.countryOrigin)
+})
+// console.log(list)
+
+const countryList = list.filter((item, index) => list.indexOf(item) === index)
+
+// let uniqueList = [...new Set(list)]
+// const countryList = [...uniqueList]
+// console.log(countryList)
+
+module.exports = { franchises, countryList }

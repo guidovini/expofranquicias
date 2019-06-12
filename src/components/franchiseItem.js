@@ -58,7 +58,7 @@ const Franchise = ({ franchise }) => {
         {size && (
           <div className={franchiseItemStyles.field}>
             <h4 className={franchiseItemStyles.fieldTitle}>
-              Tamaño del local:
+              Tamaño del Local:
             </h4>
             <p className={franchiseItemStyles.fieldContent}>
               {size} {sizeUnits}
