@@ -25,6 +25,7 @@ class ControlBar extends Component {
         onChange={e => {
           this.props.handleFilter(e.target.value)
         }}
+        className="select"
       >
         <option value="all">Todos</option>
         {countries.map(country => {
@@ -46,6 +47,8 @@ class ControlBar extends Component {
         onChange={e => {
           this.props.handleSearch(e.target.value)
         }}
+        className="input"
+        placeholder="Encuentra franquicias por nombre"
       />
     )
   }
@@ -53,31 +56,62 @@ class ControlBar extends Component {
   render() {
     return (
       <div className={ControlBarStyles.control}>
-        <form>
-          <label>
-            Ordenar:
-            {this.orderBySelector()}
-          </label>
+        <div
+          className="field is-horizontal"
+          // style={{ flexBasis: '16rem' }}
+          style={{ flexShrink: '1' }}
+        >
+          <div className="field-label is-normal">
+            <label className="label">Ordenar:</label>
+          </div>
+          <div className="control">
+            <div className="select">{this.orderBySelector()}</div>
+          </div>
+        </div>
 
-          <label>
-            Filtrar franquicia por país:
-            {this.filterByCountrySelector(this.props.countries)}
-          </label>
+        <div
+          className="field is-horizontal"
+          // style={{ flexBasis: '18rem' }}
+          style={{ flexShrink: '1' }}
+        >
+          <div className="field-label is-normal">
+            <label className="label">Filtro por país:</label>
+          </div>
+          <div className="control has-icons-left">
+            <span className="select">
+              {this.filterByCountrySelector(this.props.countries)}
+            </span>
+            <span className="icon is-small is-left">
+              <i className="fas fa-globe"></i>
+            </span>
+          </div>
+        </div>
 
-          <label>
-            Buscar:
+        <div
+          className="field is-horizontal"
+          // style={{ flexBasis: '28rem', padding: '0 1rem' }}
+          style={{ flexShrink: '0' }}
+        >
+          <div className="field-label is-normal">
+            <label className="label">Buscar:</label>
+          </div>
+          <div className="control is-expandable" style={{ flexBasis: '28rem' }}>
             {this.searchBySelector()}
-          </label>
+          </div>
+        </div>
 
-          <button
-            onClick={e => {
-              e.preventDefault()
-              this.props.resetControlBar()
-            }}
-          >
-            x
-          </button>
-        </form>
+        <button
+          onClick={e => {
+            e.preventDefault()
+            this.props.resetControlBar()
+          }}
+          className={ControlBarStyles.button}
+          // className={'delete is-medium'}
+          title="Reiniciar opciones"
+          style={{ margin: '5px' }}
+        >
+          x
+        </button>
       </div>
     )
   }
