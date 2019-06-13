@@ -13,6 +13,12 @@ class FranchiseList extends Component {
     searchBy: '',
   }
 
+  componentDidMount() {
+    function scrollWin(x, y) {
+      window.scrollBy(x, y)
+    }
+  }
+
   handleOrder = val => {
     this.setState({
       orderBy: val,
@@ -84,16 +90,7 @@ class FranchiseList extends Component {
       <div>
         <div
           id="top-of-site-pixel-anchor"
-          style={{
-            position: 'absolute',
-            width: '1px',
-            height: '1px',
-            // IF ACTIVATE CAUSES AN ERROR
-            // top: '20rem',
-            // top: '120vh',
-            // top: '20rem',
-            left: '0',
-          }}
+          className={franchiseListStyles.topAnchor}
         ></div>
         <ControlBar
           countries={countryList}

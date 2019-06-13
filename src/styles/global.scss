@@ -5,7 +5,7 @@
   padding: 1rem 0;
   padding-bottom: 0.25rem;
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
 
   display: flex;
   flex-direction: row;
@@ -29,6 +29,7 @@
     body.header-not-at-top {
       // IF ACTIVATED CAUSES AN ERROR
       // padding-top: 44px;
+      // padding-top: 7rem; //! THIS IS THE SOLUTION, NOW FIND THE ERROR!
     }
   }
 

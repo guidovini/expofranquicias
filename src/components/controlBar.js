@@ -10,7 +10,11 @@ class ControlBar extends Component {
       'intersectionRatio' in window.IntersectionObserverEntry.prototype
     ) {
       let observer = new IntersectionObserver(entries => {
-        if (entries[0].boundingClientRect.y < 0) {
+        // const condition = entries[0].boundingClientRect.y
+        const condition = entries[0].boundingClientRect.y
+        console.log(entries[0])
+        console.log(condition)
+        if (condition < -50) {
           document.body.classList.add('header-not-at-top')
         } else {
           document.body.classList.remove('header-not-at-top')
