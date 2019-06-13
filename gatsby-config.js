@@ -3,8 +3,10 @@ module.exports = {
     title: `Expofranquicias Ecuador`,
     description: `El lugar ideal para encontrar tu proximo negocio`,
     author: `Ecuafranquicias`,
+    siteUrl: `https://expofranquiciasecuador.com/`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
