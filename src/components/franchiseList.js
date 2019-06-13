@@ -39,9 +39,10 @@ class FranchiseList extends Component {
   franchiseSelector = (franchises, orderBy, filterBy, searchBy) => {
     return franchises
       .filter(franchise => {
+        const searchText = searchBy.toLowerCase().trim()
         return (
-          franchise.name.toLowerCase().includes(searchBy.toLowerCase()) ||
-          franchise.concept.toLowerCase().includes(searchBy.toLowerCase())
+          franchise.name.toLowerCase().includes(searchText) ||
+          franchise.concept.toLowerCase().includes(searchText)
         )
       })
       .filter(franchise => {
