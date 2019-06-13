@@ -65,30 +65,14 @@ class ControlBar extends Component {
           this.props.handleSearch(e.target.value)
         }}
         className="input"
-        placeholder="Encuentra franquicias por nombre"
+        placeholder="Encuentra franquicias"
       />
     )
   }
 
   render() {
     return (
-      <div
-        className="control-bar"
-        // style={{
-        //   position: 'relative',
-        //   backgroundColor: '#eee',
-        //   borderRadius: '15px',
-        //   padding: '1rem 0',
-        //   paddingBottom: '0.25rem',
-        //   marginTop: '3rem',
-        //   marginBottom: '2rem',
-        //   display: 'flex',
-        //   flexDirection: 'row',
-        //   justifyContent: 'space-evenly',
-        //   alignItems: 'flex-start',
-        //   flexWrap: 'wrap',
-        // }}
-      >
+      <div className="control-bar">
         <div
           className="field is-horizontal"
           // style={{ flexBasis: '16rem' }}
