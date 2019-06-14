@@ -73,7 +73,7 @@ class ControlBar extends Component {
           this.props.handleSearch(e.target.value)
         }}
         className="input"
-        placeholder="Encuentra franquicias"
+        placeholder="Por nombre de franquicia o concepto de negocio"
       />
     )
   }
@@ -84,7 +84,7 @@ class ControlBar extends Component {
         <div
           className="field is-horizontal"
           // style={{ flexBasis: '16rem' }}
-          style={{ flexShrink: '1' }}
+          // style={{ flexGrow: '1' }}
         >
           <div className="field-label is-normal">
             <label className="label">Ordenar:</label>
@@ -97,7 +97,7 @@ class ControlBar extends Component {
         <div
           className="field is-horizontal"
           // style={{ flexBasis: '18rem' }}
-          style={{ flexShrink: '1' }}
+          // style={{ flexGrow: '1' }}
         >
           <div className="field-label is-normal">
             <label className="label">Filtro por país:</label>
@@ -115,7 +115,8 @@ class ControlBar extends Component {
         <div
           className="field is-horizontal"
           // style={{ flexBasis: '28rem', padding: '0 1rem' }}
-          style={{ flexShrink: '0' }}
+          // style={{ flexGrow: '2' }}
+          style={{ flexBasis: '30rem' }}
         >
           <div className="field-label is-normal">
             <label className="label">Buscar:</label>
