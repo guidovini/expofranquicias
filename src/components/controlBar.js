@@ -116,7 +116,7 @@ class ControlBar extends Component {
           className="field is-horizontal"
           // style={{ flexBasis: '28rem', padding: '0 1rem' }}
           // style={{ flexGrow: '2' }}
-          style={{ flexBasis: '30rem' }}
+          // style={{ flexBasis: '20rem' }}
         >
           <div className="field-label is-normal">
             <label className="label">Buscar:</label>
