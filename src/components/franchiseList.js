@@ -88,10 +88,6 @@ class FranchiseList extends Component {
 
     return (
       <div>
-        <div
-          id="top-of-site-pixel-anchor"
-          className={franchiseListStyles.topAnchor}
-        ></div>
         <ControlBar
           countries={countryList}
           handleOrder={this.handleOrder}
@@ -102,7 +98,7 @@ class FranchiseList extends Component {
           filterBy={filterBy}
           searchBy={searchBy}
         />
-        <div className={franchiseListStyles.column}>
+        <div className={franchiseListStyles.column} id="stickyContent">
           {newFranchises.map(franchise => {
             return (
               franchise.investment && (
@@ -118,5 +114,10 @@ class FranchiseList extends Component {
     )
   }
 }
+
+// <div
+// id="top-of-site-pixel-anchor"
+// className={franchiseListStyles.topAnchor}
+// ></div>
 
 export default FranchiseList

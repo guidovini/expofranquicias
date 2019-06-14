@@ -22,7 +22,6 @@
 
     border-radius: 0px;
     margin-top: 0;
-    // margin-bottom: 10rem;
   }
 
   @at-root {
@@ -39,4 +38,8 @@
     // flex-direction: column;
     // justify-content: stretch;
   }
+}
+
+.sticky-content {
+  padding-top: 2rem;
 }

@@ -8,21 +8,25 @@
   justify-content: center;
 }
 
-.top-anchor {
-  position: absolute;
-  width: 90vw;
-  // width: 1px
-  height: 1px;
-  background-color: blue;
-  // top: 500px;
-  top: 31.25rem;
-  // AN ERROR HAPPENS WITH THESE VALUES
-  // top: 20rem;
-  // top: 120vh;
-  // top: 20rem;
-  left: 0;
+// .top-anchor {
+//   display: inline;
+//   position: absolute;
+//   width: 90vw;
+//   // width: 1px
+//   height: 1px; // ?
+//   // height: 15rem;
+//   background-color: blue;
+//   // top: 500px;
+//   // top: 30rem;
+//   top: 31.25rem; //?
+//   // AN ERROR HAPPENS WITH THESE VALUES
+//   // top: 20rem;
+//   // top: 120vh;
+//   // top: 20rem;
+//   left: 0;
+//   z-index: -999;
 
-  @media only screen and (max-width: 37.5em) {
-    top: 62.5rem;
-  }
-}
+//   @media only screen and (max-width: 37.5em) {
+//     top: 62.5rem;
+//   }
+// }

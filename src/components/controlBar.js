@@ -4,23 +4,27 @@ import ControlBarStyles from './controlBar.module.scss'
 
 class ControlBar extends Component {
   componentDidMount() {
-    if (
-      'IntersectionObserver' in window &&
-      'IntersectionObserverEntry' in window &&
-      'intersectionRatio' in window.IntersectionObserverEntry.prototype
-    ) {
-      let observer = new IntersectionObserver(entries => {
-        // const condition = entries[0].boundingClientRect.y
-        const condition = entries[0].boundingClientRect.y
-        console.log(entries[0])
-        console.log(condition)
-        if (condition < -50) {
-          document.body.classList.add('header-not-at-top')
-        } else {
-          document.body.classList.remove('header-not-at-top')
-        }
-      })
-      observer.observe(document.querySelector('#top-of-site-pixel-anchor'))
+    // When the user scrolls the page, execute stickyFunction
+    window.onscroll = function() {
+      stickyFunction()
+    }
+
+    // Get the header
+    var header = document.getElementById('myHeader')
+    var content = document.getElementById('stickyContent')
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function stickyFunction() {
+      if (window.pageYOffset > sticky) {
+        content.classList.add('sticky-content')
+        document.body.classList.add('header-not-at-top')
+      } else {
+        content.classList.remove('sticky-content')
+        document.body.classList.remove('header-not-at-top')
+      }
     }
   }
 
@@ -76,7 +80,7 @@ class ControlBar extends Component {
 
   render() {
     return (
-      <div className="control-bar">
+      <div className="control-bar" id="myHeader">
         <div
           className="field is-horizontal"
           // style={{ flexBasis: '16rem' }}
