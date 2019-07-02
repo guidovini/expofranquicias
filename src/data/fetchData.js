@@ -21,9 +21,9 @@ const fetchData = () => {
     }
   `)
 
-  const franquicias = data.allGoogleSheetListadoFranquiciasRow.nodes
-  // console.log('franquicias', franquicias)
-  return franquicias
+  const franchises = data.allGoogleSheetListadoFranquiciasRow.nodes
+  // console.log('franchises', franchises)
+  return franchises
 }
 
 export { fetchData as default }

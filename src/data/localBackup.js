@@ -1,4 +1,4 @@
-const franquicias = [
+const franchises = [
   {
     nombre: 'Autoseguro',
     concepto: 'Blindaje Automotores Anti Asalto y Anti Bandálico',
@@ -289,4 +289,4 @@ const franquicias = [
   },
 ]
 
-module.exports = { franquicias }
+module.exports = { franchises }
