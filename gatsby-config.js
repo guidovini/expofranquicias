@@ -6,6 +6,14 @@ module.exports = {
     siteUrl: `https://expofranquiciasecuador.com/`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-google-sheets',
+      options: {
+        spreadsheetId: '1Lj6EfELbM2KuHC5lmftxrR9-j4tu9Oi-MrCvTKnatpQ',
+        worksheetTitle: 'Franquicias',
+        credentials: require('./config/client_secret.json'),
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
