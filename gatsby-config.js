@@ -6,11 +6,13 @@ module.exports = {
     siteUrl: `https://expofranquiciasecuador.com/`,
   },
   plugins: [
+    `gatsby-plugin-playground`,
     {
       resolve: 'gatsby-source-google-sheets',
       options: {
-        spreadsheetId: '1Lj6EfELbM2KuHC5lmftxrR9-j4tu9Oi-MrCvTKnatpQ',
-        worksheetTitle: 'Franquicias',
+        // spreadsheetId: '1Lj6EfELbM2KuHC5lmftxrR9-j4tu9Oi-MrCvTKnatpQ', // test sheet id
+        spreadsheetId: '1Lj6EfELbM2KuHC5lmftxrR9-j4tu9Oi-MrCvTKnatpQ', // production sheet id
+        worksheetTitle: 'ListadoFranquicias',
         credentials: require('./config/client_secret.json'),
       },
     },
