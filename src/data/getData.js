@@ -1,4 +1,3 @@
-import fetchData from './fetchData'
 import getCountryList from './getCountryList'
 import localBackup from './localBackup'
 import currencyFormatter from './currencyFormatter'
@@ -9,13 +8,14 @@ const googleSheetsEnabler = true
 const getData = (franchises = []) => {
   console.log('getData activated!')
   if (googleSheetsEnabler && franchises.length > 0) {
-    // franchises = fetchData() // Hook method
-
     franchises.forEach(franchise => {
       // Separate categories into individual items
-      //   if (franchise.categoria.includes(';')) {
-      //     franchise.categoria = franchise.categoria.split(';')
-      //   }
+      if (franchise.categoria.includes(';')) {
+        franchise.categoria = franchise.categoria.split(';')
+      }
+
+      // Remove square meters and replace it with an empty space
+      franchise.tamanoLocal = franchise.tamanoLocal.replace(' m2', ' ')
 
       // Format currency
       franchise.inversion = currencyFormatter(franchise.inversion)
