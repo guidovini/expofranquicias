@@ -1,6 +1,7 @@
 import fetchData from './fetchData'
 import getCountryList from './getCountryList'
 import localBackup from './localBackup'
+import currencyFormatter from './currencyFormatter'
 
 // To enable import from Google Sheets
 const googleSheetsEnabler = true
@@ -10,12 +11,15 @@ const getData = (franchises = []) => {
   if (googleSheetsEnabler && franchises.length > 0) {
     // franchises = fetchData() // Hook method
 
-    // Separate categories in individual items
-    // franchises.forEach(franchise => {
-    //   if (franchise.categoria.includes(';')) {
-    //     franchise.categoria = franchise.categoria.split(';')
-    //   }
-    // })
+    franchises.forEach(franchise => {
+      // Separate categories into individual items
+      //   if (franchise.categoria.includes(';')) {
+      //     franchise.categoria = franchise.categoria.split(';')
+      //   }
+
+      // Format currency
+      franchise.inversion = currencyFormatter(franchise.inversion)
+    })
 
     console.log('googleSheetsEnabler', franchises)
   } else {
