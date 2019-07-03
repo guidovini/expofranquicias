@@ -106,10 +106,7 @@ const Franchise = ({ franchise }) => {
           <h4 className={franchiseItemStyles.priceTitle}>
             Inversión Aproximada Desde
           </h4>
-          <p className={franchiseItemStyles.price}>
-            <span>$ </span>
-            {inversion}
-          </p>
+          <p className={franchiseItemStyles.price}>{inversion}</p>
         </div>
       </div>
     </div>
