@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const query = graphql`
   query {

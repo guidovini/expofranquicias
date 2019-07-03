@@ -8,6 +8,7 @@ let franchises = []
 const googleSheetsEnabler = false
 
 const getData = () => {
+  console.log('getData activated!')
   if (googleSheetsEnabler) {
     franchises = fetchData()
 
@@ -18,10 +19,10 @@ const getData = () => {
       }
     })
 
-    console.log(franchises)
+    console.log('googleSheetsEnabler', franchises)
   } else {
-    franchises = localBackup.franchises
-    // console.log(localBackup.franchises)
+    franchises = localBackup
+    console.log('localBackup', localBackup)
   }
 
   const countryList = getCountryList(franchises)

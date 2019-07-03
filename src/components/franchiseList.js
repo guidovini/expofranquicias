@@ -96,7 +96,7 @@ class FranchiseList extends Component {
   }
 }
 
-const query = graphql`
+export const query = graphql`
   query {
     allGoogleSheetListadoFranquiciasRow {
       nodes {

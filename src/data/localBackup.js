@@ -288,4 +288,4 @@ const franchises = [
   },
 ]
 
-module.exports = { franchises }
+export { franchises as default }
