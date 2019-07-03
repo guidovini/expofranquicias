@@ -6,63 +6,61 @@ import franchiseItemStyles from './franchiseItem.module.scss'
 
 const Franchise = ({ franchise }) => {
   const {
-    name,
-    concept,
-    category,
-    size,
-    sizeUnits,
-    yearsOperation,
-    locations,
-    investment,
-    investmentLocationOnly,
-    roiTime,
-    countryAvailability,
-    countryOrigin,
+    nombre,
+    categoria,
+    concepto,
+    aniosOperacion,
+    numeroLocales,
+    tamanoLocal,
+    disponibilidadTerritorial,
+    paisOrigen,
+    tiempoRetornoInversion,
+    inversion,
   } = franchise
 
   return (
     <div className={franchiseItemStyles.container}>
       <div className={franchiseItemStyles.imageBox}>
-        <Logo imgName={`${name}.jpg`} />
+        <Logo imgName={`${nombre}.jpg`} />
       </div>
 
       <div className={franchiseItemStyles.data}>
-        <h3 className="title is-4 has-text-grey-dark">{name}</h3>
-        <p className="subtitle is-6 has-text-grey-dark">{concept}</p>
+        <h3 className="title is-4 has-text-grey-dark">{nombre}</h3>
+        <p className="subtitle is-6 has-text-grey-dark">{concepto}</p>
 
-        {category && (
-          <div className={franchiseItemStyles.field}>
-            <h4 className={franchiseItemStyles.fieldTitle}>Categoría:</h4>
-            <p className={franchiseItemStyles.fieldContent}>{category}</p>
-          </div>
-        )}
+        {
+          //   categoria && (
+          //   <div className={franchiseItemStyles.field}>
+          //     <h4 className={franchiseItemStyles.fieldTitle}>Categoría:</h4>
+          //     <p className={franchiseItemStyles.fieldContent}>{categoria}</p>
+          //   </div>
+          // )
+        }
 
-        {yearsOperation && (
+        {aniosOperacion && (
           <div className={franchiseItemStyles.field}>
             <h4 className={franchiseItemStyles.fieldTitle}>
               Años de Operación:
             </h4>
-            <p className={franchiseItemStyles.fieldContent}>{yearsOperation}</p>
+            <p className={franchiseItemStyles.fieldContent}>{aniosOperacion}</p>
           </div>
         )}
 
-        {locations && (
+        {numeroLocales && (
           <div className={franchiseItemStyles.field}>
             <h4 className={franchiseItemStyles.fieldTitle}>
               Número de Locales:
             </h4>
-            <p className={franchiseItemStyles.fieldContent}>{locations}</p>
+            <p className={franchiseItemStyles.fieldContent}>{numeroLocales}</p>
           </div>
         )}
 
-        {size && (
+        {tamanoLocal && (
           <div className={franchiseItemStyles.field}>
             <h4 className={franchiseItemStyles.fieldTitle}>
               Tamaño del Local:
             </h4>
-            <p className={franchiseItemStyles.fieldContent}>
-              {size} {sizeUnits}
-            </p>
+            <p className={franchiseItemStyles.fieldContent}>{tamanoLocal}</p>
           </div>
         )}
 
@@ -71,7 +69,7 @@ const Franchise = ({ franchise }) => {
             Disponibilidad Territorial:
           </h4>
           <p className={franchiseItemStyles.fieldContent}>
-            {countryAvailability}
+            {disponibilidadTerritorial}
           </p>
         </div>
 
@@ -79,18 +77,20 @@ const Franchise = ({ franchise }) => {
           <h4 className={franchiseItemStyles.fieldTitle}>País de Origen:</h4>
           <img
             className={franchiseItemStyles.flag}
-            src={require(`../assets/flags/${countryOrigin}.png`)}
-            alt={`${countryOrigin} flag`}
-            title={countryOrigin}
+            src={require(`../assets/flags/${paisOrigen}.png`)}
+            alt={`${paisOrigen} flag`}
+            title={paisOrigen}
           />
         </div>
 
-        {roiTime && (
+        {tiempoRetornoInversion && (
           <div className={franchiseItemStyles.field}>
             <h4 className={franchiseItemStyles.fieldTitle}>
               Tiempo Retorno de Inversión:
             </h4>
-            <p className={franchiseItemStyles.fieldContent}>{roiTime}</p>
+            <p className={franchiseItemStyles.fieldContent}>
+              {tiempoRetornoInversion}
+            </p>
           </div>
         )}
 
@@ -108,29 +108,12 @@ const Franchise = ({ franchise }) => {
           </h4>
           <p className={franchiseItemStyles.price}>
             <span>$ </span>
-            {investment}
+            {inversion}
           </p>
         </div>
       </div>
     </div>
   )
 }
-
-// <div
-// className={franchiseItemStyles.field}
-// style={{ justifyContent: 'center', flexDirection: 'column' }}
-// >
-// <h4 className={franchiseItemStyles.priceLocationsTitle}>
-//   Inversion Montaje del Local
-// </h4>
-// <p className={franchiseItemStyles.priceLocations}>
-//   <span>$ </span>
-//   {investmentLocationOnly}
-// </p>
-// </div>
-
-// <p className={franchiseItemStyles.fieldContent}>
-// {countryOrigin} &nbsp;
-// </p>
 
 export default Franchise

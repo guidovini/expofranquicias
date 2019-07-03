@@ -266,8 +266,7 @@ const franchises = [
   },
   {
     nombre: 'Cosa Nostra',
-    concepto:
-      'Trattoría y Pezzería                           (Comida Italiana)',
+    concepto: 'Trattoría y Pezzería (Comida Italiana)',
     tamanoLocal: '250 m2',
     aniosOperacion: '8',
     numeroLocales: '3',

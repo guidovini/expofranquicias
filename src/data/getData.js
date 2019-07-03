@@ -5,7 +5,7 @@ import localBackup from './localBackup'
 let franchises = []
 
 // To enable import from Google Sheets
-const googleSheetsEnabler = true
+const googleSheetsEnabler = false
 
 const getData = () => {
   if (googleSheetsEnabler) {
@@ -25,6 +25,7 @@ const getData = () => {
   }
 
   const countryList = getCountryList(franchises)
+
   return { franchises, countryList }
 }
 

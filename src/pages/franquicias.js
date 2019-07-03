@@ -5,15 +5,15 @@ import getData from '../data/getData'
 const ListadoFranquicias = () => {
   const { franchises, countryList } = getData()
 
-  const renderCategories = categories => {
-    if (Array.isArray(categories)) {
-      return categories.map(category => (
-        <p className="box" key={category}>
-          {category}
+  const renderCategories = category => {
+    if (Array.isArray(category)) {
+      return category.map(subCategory => (
+        <p className="box" key={subCategory}>
+          {subCategory}
         </p>
       ))
     } else {
-      return <p className="box">{categories}</p>
+      return category && <p className="box">{category}</p>
     }
   }
 
