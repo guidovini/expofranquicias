@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import { graphql, useStaticQuery, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 
 // Components
 import FranchiseItem from './franchiseItem'
 import ControlBar from './controlBar'
 
 // Data
-import getData from '../data/getData'
 import franchiseSelector from '../selectors/franchisesSelector'
-// import fetchData from '../data/fetchData'
+import getCountryList from '../data/getCountryList'
 
 // Styles
 import franchiseListStyles from './franchiseList.module.scss'
@@ -23,9 +22,8 @@ class FranchiseList extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.franchises)
-    const { franchises, countryList } = getData()
-    console.log(franchises, countryList)
+    const franchises = this.props.franchises
+    const countryList = getCountryList(franchises)
 
     this.setState({
       franchises,
