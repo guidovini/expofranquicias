@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
+import { graphql, useStaticQuery, StaticQuery } from 'gatsby'
 
 // Components
 import FranchiseItem from './franchiseItem'
 import ControlBar from './controlBar'
 
 // Data
+import getData from '../data/getData'
 import franchiseSelector from '../selectors/franchisesSelector'
-import { franchises, countryList } from '../data/franchiseList'
+// import fetchData from '../data/fetchData'
 
 // Styles
 import franchiseListStyles from './franchiseList.module.scss'
@@ -16,9 +18,20 @@ class FranchiseList extends Component {
     orderBy: 'alpha',
     filterBy: 'all',
     searchBy: '',
+    franchises: [],
+    countryList: [],
   }
 
   componentDidMount() {
+    console.log(this.props.franchises)
+    const { franchises, countryList } = getData()
+    console.log(franchises, countryList)
+
+    this.setState({
+      franchises,
+      countryList,
+    })
+
     function scrollWin(x, y) {
       window.scrollBy(x, y)
     }
@@ -48,7 +61,7 @@ class FranchiseList extends Component {
   }
 
   render() {
-    const { orderBy, filterBy, searchBy } = this.state
+    const { orderBy, filterBy, searchBy, franchises, countryList } = this.state
     const filteredFranchises = franchiseSelector(
       franchises,
       orderBy,
@@ -71,10 +84,10 @@ class FranchiseList extends Component {
         <div className={franchiseListStyles.column} id="stickyContent">
           {filteredFranchises.map(franchise => {
             return (
-              franchise.investment && (
+              franchise.inversion && (
                 <FranchiseItem
                   franchise={franchise}
-                  key={`${franchise.name} + ${franchise.investment}`}
+                  key={franchise.id || franchise.nombre}
                 />
               )
             )
@@ -85,9 +98,34 @@ class FranchiseList extends Component {
   }
 }
 
-// <div
-// id="top-of-site-pixel-anchor"
-// className={franchiseListStyles.topAnchor}
-// ></div>
+const query = graphql`
+  query {
+    allGoogleSheetListadoFranquiciasRow {
+      nodes {
+        id
+        nombre
+        categoria
+        concepto
+        aniosOperacion
+        numeroLocales
+        tamanoLocal
+        disponibilidadTerritorial
+        paisOrigen
+        tiempoRetornoInversion
+        inversion
+      }
+    }
+  }
+`
 
-export default FranchiseList
+export default props => (
+  <StaticQuery
+    query={query}
+    render={data => {
+      const franchises = data.allGoogleSheetListadoFranquiciasRow.nodes
+      return <FranchiseList franchises={franchises} {...props} />
+    }}
+  />
+)
+
+// export default FranchiseList
