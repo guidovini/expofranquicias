@@ -7,7 +7,7 @@ import ControlBar from './controlBar'
 
 // Data
 import franchiseSelector from '../selectors/franchisesSelector'
-import getCountryList from '../data/getCountryList'
+import getData from '../data/getData'
 
 // Styles
 import franchiseListStyles from './franchiseList.module.scss'
@@ -22,8 +22,7 @@ class FranchiseList extends Component {
   }
 
   componentDidMount() {
-    const franchises = this.props.franchises
-    const countryList = getCountryList(franchises)
+    const { franchises, countryList } = getData(this.props.franchises)
 
     this.setState({
       franchises,

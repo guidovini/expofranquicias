@@ -2,22 +2,20 @@ import fetchData from './fetchData'
 import getCountryList from './getCountryList'
 import localBackup from './localBackup'
 
-let franchises = []
-
 // To enable import from Google Sheets
-const googleSheetsEnabler = false
+const googleSheetsEnabler = true
 
-const getData = () => {
+const getData = (franchises = []) => {
   console.log('getData activated!')
-  if (googleSheetsEnabler) {
-    franchises = fetchData()
+  if (googleSheetsEnabler && franchises.length > 0) {
+    // franchises = fetchData() // Hook method
 
     // Separate categories in individual items
-    franchises.forEach(franchise => {
-      if (franchise.categoria.includes(';')) {
-        franchise.categoria = franchise.categoria.split(';')
-      }
-    })
+    // franchises.forEach(franchise => {
+    //   if (franchise.categoria.includes(';')) {
+    //     franchise.categoria = franchise.categoria.split(';')
+    //   }
+    // })
 
     console.log('googleSheetsEnabler', franchises)
   } else {
