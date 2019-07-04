@@ -7,15 +7,17 @@
 
 const locales = 'es-EC'
 const options = {
-  // style: 'currency',
-  // currency: 'USD',
+  style: 'currency',
+  currency: 'USD',
   // currencyDisplay: 'code', // Displays USD 1,000.00
   // useGrouping: false, // To use thousands separators. Displays 565000.13
   minimumFractionDigits: 0,
 }
 
+const formatter = new Intl.NumberFormat(locales, options)
+
 const currencyFormatter = number => {
-  return new Intl.NumberFormat(locales, options).format(number)
+  return formatter.format(number)
   // .replace(/^(\D+)/, '$1 ')
 }
 

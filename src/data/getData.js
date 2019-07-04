@@ -18,7 +18,7 @@ const getData = (franchises = []) => {
       franchise.tamanoLocal = franchise.tamanoLocal.replace(' m2', ' ')
 
       // Format currency
-      franchise.inversion = currencyFormatter(franchise.inversion)
+      // franchise.inversion = currencyFormatter(franchise.inversion)
     })
 
     console.log('googleSheetsEnabler', franchises)

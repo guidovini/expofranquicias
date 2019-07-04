@@ -22,7 +22,7 @@ class FranchiseList extends Component {
   }
 
   componentDidMount() {
-    const { franchises, countryList } = getData(this.props.franchises)
+    const { franchises, countryList } = getData(this.props.queryData)
 
     this.setState({
       franchises,
@@ -119,8 +119,8 @@ export default props => (
   <StaticQuery
     query={query}
     render={data => {
-      const franchises = data.allGoogleSheetListadoFranquiciasRow.nodes
-      return <FranchiseList franchises={franchises} {...props} />
+      const queryData = data.allGoogleSheetListadoFranquiciasRow.nodes
+      return <FranchiseList queryData={queryData} {...props} />
     }}
   />
 )
