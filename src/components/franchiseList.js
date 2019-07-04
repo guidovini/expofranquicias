@@ -23,11 +23,11 @@ class FranchiseList extends Component {
 
   componentDidMount() {
     const franchises = this.props.queryData
-    const countryList = getCountryList(franchises)
+    // const countryList = getCountryList(franchises)
 
     this.setState({
       franchises,
-      countryList,
+      countryList: getCountryList(franchises),
     })
 
     function scrollWin(x, y) {
