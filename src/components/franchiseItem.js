@@ -19,11 +19,33 @@ const Franchise = ({ franchise }) => {
     inversion,
   } = franchise
 
+  const renderCategories = category => {
+    if (Array.isArray(category)) {
+      return category.map(subCategory => (
+        <p className={franchiseItemStyles.subCategory} key={subCategory}>
+          {subCategory}
+        </p>
+      ))
+    } else {
+      return (
+        category && (
+          <p className={franchiseItemStyles.subCategory}>{category}</p>
+        )
+      )
+    }
+  }
+
   return (
     <div className={franchiseItemStyles.container}>
       <div className={franchiseItemStyles.imageBox}>
         <Logo imgName={`${nombre}.jpg`} />
       </div>
+
+      {
+        //   <div className={franchiseItemStyles.category}>
+        //   {renderCategories(categoria)}
+        // </div>
+      }
 
       <div className={franchiseItemStyles.data}>
         <h3 className="title is-4 has-text-grey-dark">{nombre}</h3>
