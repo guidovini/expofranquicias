@@ -1,8 +1,15 @@
 import React from 'react'
 
+// Components
 import Logo from './logo'
 import FranchiseField from './franchiseField'
 
+// Utils
+import currencyFormatter from '../utils/currencyFormatter'
+import removeSquaredMeters from '../utils/removeSquaredMeters'
+import renderCategories from '../utils/renderCategories'
+
+// Styles
 import franchiseItemStyles from './franchiseItem.module.scss'
 
 const Franchise = ({ franchise }) => {
@@ -19,22 +26,6 @@ const Franchise = ({ franchise }) => {
     inversion,
   } = franchise
 
-  const renderCategories = category => {
-    if (Array.isArray(category)) {
-      return category.map(subCategory => (
-        <p className={franchiseItemStyles.subCategory} key={subCategory}>
-          {subCategory}
-        </p>
-      ))
-    } else {
-      return (
-        category && (
-          <p className={franchiseItemStyles.subCategory}>{category}</p>
-        )
-      )
-    }
-  }
-
   return (
     <div className={franchiseItemStyles.container}>
       <div className={franchiseItemStyles.imageBox}>
@@ -42,7 +33,7 @@ const Franchise = ({ franchise }) => {
       </div>
 
       {
-        //   <div className={franchiseItemStyles.category}>
+        // <div className={franchiseItemStyles.category}>
         //   {renderCategories(categoria)}
         // </div>
       }
@@ -66,7 +57,10 @@ const Franchise = ({ franchise }) => {
         )}
 
         {tamanoLocal && (
-          <FranchiseField field={'tamanoLocal'} fieldContent={tamanoLocal} />
+          <FranchiseField
+            field={'tamanoLocal'}
+            fieldContent={removeSquaredMeters(tamanoLocal)}
+          />
         )}
 
         {disponibilidadTerritorial && (
@@ -100,8 +94,10 @@ const Franchise = ({ franchise }) => {
             Inversión Aproximada Desde
           </h4>
           <p className={franchiseItemStyles.price}>
-            <span>$ </span>
-            {inversion}
+            {
+              // <span>$ </span>
+            }
+            {currencyFormatter(inversion)}
           </p>
         </div>
       </div>

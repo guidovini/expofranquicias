@@ -17,8 +17,7 @@ const options = {
 const formatter = new Intl.NumberFormat(locales, options)
 
 const currencyFormatter = number => {
-  return formatter.format(number)
-  // .replace(/^(\D+)/, '$1 ')
+  return formatter.format(number).replace(/^(\D+)/, '$1 ')
 }
 
 export { currencyFormatter as default }

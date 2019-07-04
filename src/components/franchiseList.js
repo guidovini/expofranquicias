@@ -5,9 +5,9 @@ import { graphql, StaticQuery } from 'gatsby'
 import FranchiseItem from './franchiseItem'
 import ControlBar from './controlBar'
 
-// Data
-import franchiseSelector from '../selectors/franchisesSelector'
-import getData from '../data/getData'
+// Utils
+import franchisesSelector from '../selectors/franchisesSelector'
+import getCountryList from '../utils/getCountryList'
 
 // Styles
 import franchiseListStyles from './franchiseList.module.scss'
@@ -22,7 +22,8 @@ class FranchiseList extends Component {
   }
 
   componentDidMount() {
-    const { franchises, countryList } = getData(this.props.queryData)
+    const franchises = this.props.queryData
+    const countryList = getCountryList(franchises)
 
     this.setState({
       franchises,
@@ -59,12 +60,15 @@ class FranchiseList extends Component {
 
   render() {
     const { orderBy, filterBy, searchBy, franchises, countryList } = this.state
-    const filteredFranchises = franchiseSelector(
+    const filteredFranchises = franchisesSelector(
       franchises,
       orderBy,
       filterBy,
       searchBy
     )
+    // Formatting...
+    // const modifiedFranchises = franchisesModifier(filteredFranchises)
+    // console.log(modifiedFranchises)
 
     return (
       <div>

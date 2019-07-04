@@ -1,6 +1,6 @@
-import getCountryList from './getCountryList'
+import getCountryList from '../utils/getCountryList'
 import localBackup from './localBackup'
-import currencyFormatter from './currencyFormatter'
+import currencyFormatter from '../utils/currencyFormatter'
 
 // To enable import from Google Sheets
 const googleSheetsEnabler = true
@@ -18,7 +18,7 @@ const getData = (franchises = []) => {
       franchise.tamanoLocal = franchise.tamanoLocal.replace(' m2', ' ')
 
       // Format currency
-      // franchise.inversion = currencyFormatter(franchise.inversion)
+      franchise.inversion = currencyFormatter(franchise.inversion)
     })
 
     console.log('googleSheetsEnabler', franchises)

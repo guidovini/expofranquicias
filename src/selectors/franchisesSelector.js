@@ -1,4 +1,4 @@
-const franchiseSelector = (franchises, orderBy, filterBy, searchBy) => {
+const franchisesSelector = (franchises, orderBy, filterBy, searchBy) => {
   return franchises
     .filter(franchise => {
       const searchText = searchBy.toLowerCase().trim()
@@ -33,4 +33,4 @@ const franchiseSelector = (franchises, orderBy, filterBy, searchBy) => {
     })
 }
 
-export { franchiseSelector as default }
+export { franchisesSelector as default }
