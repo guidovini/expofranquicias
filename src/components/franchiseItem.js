@@ -57,7 +57,7 @@ const Franchise = ({ franchise }) => {
                 className="icon is-medium"
                 style={{ color: '#aaa', marginRight: '0.4rem' }}
               >
-                <i className="fas fa-lg fa-clock"></i>
+                <i className="fas fa-lg fa-business-time"></i>
               </span>
               <span
                 className={franchiseItemStyles.fieldContent}
@@ -67,7 +67,7 @@ const Franchise = ({ franchise }) => {
               </span>
               <span
                 className={franchiseItemStyles.fieldTitle}
-                style={{ marginRight: '1.2em' }}
+                style={{ marginRight: '1.5em' }}
               >
                 {' '}
                 años de operación
@@ -91,10 +91,10 @@ const Franchise = ({ franchise }) => {
               </span>
               <span
                 className={franchiseItemStyles.fieldTitle}
-                style={{ marginRight: '1.2em' }}
+                style={{ marginRight: '1.5em' }}
               >
                 {' '}
-                locales
+                {numeroLocales > 1 ? 'locales' : 'local'}
               </span>
             </div>
           )}
@@ -109,11 +109,16 @@ const Franchise = ({ franchise }) => {
               </span>
               <span
                 className={franchiseItemStyles.fieldContent}
+                style={{ marginRight: '0.3rem' }}
+              >
+                {removeSquaredMeters(tamanoLocal)}
+              </span>
+              <span
+                className={franchiseItemStyles.fieldTitle}
                 style={{ marginRight: '0.65rem' }}
               >
-                {tamanoLocal}
+                m<sup>2</sup>
               </span>
-              <span className={franchiseItemStyles.fieldTitle}></span>
             </div>
           )}
         </div>

@@ -88,6 +88,7 @@
 .field {
   display: flex;
   align-items: center;
+  margin-bottom: 0.3rem;
 }
 
 .field-title {
@@ -111,13 +112,14 @@
   font-weight: 400;
   font-size: 0.8rem;
   letter-spacing: 0.15rem;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
 }
 
 .price {
   font-size: 1.8rem;
+  // font-family: 'Roboto';
   color: $primary-color;
-  // font-weight: 700;
+  // font-weight: 600;
 }
 
 .price-locations-title {
