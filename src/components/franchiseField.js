@@ -12,11 +12,11 @@ const FranchiseField = ({ field, fieldContent }) => {
       case 'tamanoLocal':
         return 'Tamaño del Local:'
       case 'disponibilidadTerritorial':
-        return 'Disponibilidad Territorial:'
+        return 'Disponibilidad:'
       case 'paisOrigen':
         return 'País de Origen:'
       case 'tiempoRetornoInversion':
-        return 'Tiempo Retorno de Inversión:'
+        return 'Tiempo ROI:'
       default:
         return ''
     }

@@ -23,11 +23,11 @@ class FranchiseList extends Component {
 
   componentDidMount() {
     const franchises = this.props.queryData
-    // const countryList = getCountryList(franchises)
+    const countryList = getCountryList(franchises)
 
     this.setState({
       franchises,
-      countryList: getCountryList(franchises),
+      countryList,
     })
 
     function scrollWin(x, y) {
@@ -66,9 +66,6 @@ class FranchiseList extends Component {
       filterBy,
       searchBy
     )
-    // Formatting...
-    // const modifiedFranchises = franchisesModifier(filteredFranchises)
-    // console.log(modifiedFranchises)
 
     return (
       <div>

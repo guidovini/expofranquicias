@@ -17,7 +17,7 @@ const IndexPage = () => (
             >
               Sitio Web para encontrar{' '}
               <strong style={{ fontWeight: '400' }}>
-                Franquicias Latinoamericanas
+                Franquicias Internacionales
               </strong>{' '}
               disponibles en Ecuador
             </h2>
