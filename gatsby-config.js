@@ -41,8 +41,8 @@ module.exports = {
         name: `Expofranquicias Ecuador`,
         short_name: `Expofranquicias Ecuador`,
         start_url: `/`,
-        background_color: `#5386e4`,
-        theme_color: `#5386e4`,
+        background_color: `#eee`,
+        theme_color: `#eee`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
