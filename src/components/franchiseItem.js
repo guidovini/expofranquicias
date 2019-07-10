@@ -57,7 +57,7 @@ const Franchise = ({ franchise }) => {
                 className="icon is-medium"
                 style={{ color: '#aaa', marginRight: '0.4rem' }}
               >
-                <i className="fas fa-lg fa-business-time"></i>
+                <i className="fas fa-lg fa-business-time" />
               </span>
               <span
                 className={franchiseItemStyles.fieldContent}
@@ -81,7 +81,7 @@ const Franchise = ({ franchise }) => {
                 className="icon is-medium"
                 style={{ color: '#aaa', marginRight: '0.4rem' }}
               >
-                <i className="fas fa-lg fa-store"></i>
+                <i className="fas fa-lg fa-store" />
               </span>
               <span
                 className={franchiseItemStyles.fieldContent}
@@ -105,7 +105,7 @@ const Franchise = ({ franchise }) => {
                 className="icon is-medium"
                 style={{ color: '#aaa', marginRight: '0.4rem' }}
               >
-                <i className="fas fa-lg fa-ruler"></i>
+                <i className="fas fa-lg fa-ruler" />
               </span>
               <span
                 className={franchiseItemStyles.fieldContent}

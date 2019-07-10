@@ -38,7 +38,7 @@ const Contacto = () => {
         }}
       >
         <p>Un servicio de: </p>
-        <br></br>
+        <br />
         <a href="http://www.ecuafranquicias.com" target="_blank">
           <img src={require('../images/ecuafranquicias-logo.png')} />
         </a>
