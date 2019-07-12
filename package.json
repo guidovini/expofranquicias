@@ -1,7 +1,7 @@
 {
   "name": "expofranquicias",
   "private": true,
-  "description": "Expofranquias Github",
+  "description": "Expofranquias Project at GitHub",
   "version": "0.1.0",
   "author": "Guido Santillan <info@guidosantillan.com>",
   "dependencies": {

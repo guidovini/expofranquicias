@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-link"
+  role="navigation"
+>
+  <div
+    className="navbar-brand"
+  >
+    <a
+      className="navbar-item"
+      href="/"
+    >
+      <header
+        className="title is-4 has-text-light has-text-weight-light"
+      >
+        Expofranquicias Ecuador
+      </header>
+    </a>
+    <div
+      className="navbar-burger burger"
+      onClick={[Function]}
+    >
+      <span />
+      <span />
+      <span />
+    </div>
+  </div>
+  <div
+    className="navbar-menu"
+  >
+    <div
+      className="navbar-start"
+    />
+    <div
+      className="navbar-end"
+    >
+      <a
+        className="navbar-item is-size-6"
+        href="/"
+      >
+        <p>
+          Inicio
+        </p>
+      </a>
+      <a
+        className="navbar-item is-size-6"
+        href="/franquicias-disponibles"
+      >
+        <span
+          className="icon"
+        >
+          <i
+            className="fas fa-briefcase"
+          />
+        </span>
+        <span>
+           
+        </span>
+        <span>
+          Franquicias Disponibles
+        </span>
+      </a>
+      <a
+        className="navbar-item is-size-6"
+        href="/contacto"
+      >
+        Contacto
+      </a>
+    </div>
+  </div>
+</nav>
+`;
