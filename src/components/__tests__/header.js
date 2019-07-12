@@ -1,13 +1,21 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 
 import Header from '../header'
 
 describe('Header', () => {
-  test('renders correctly', () => {
-    const tree = renderer
-      .create(<Header siteTitle="Default Starter" />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
+  test('Should_RenderHeaderCorrectly', () => {
+    const { container } = render(<Header siteTitle="Default Starter" />)
+    expect(container).toMatchSnapshot()
+  })
+
+  test('Should_RenderHeaderElements', () => {
+    const { getByText, queryByText } = render(
+      <Header siteTitle="Default Starter" />
+    )
+    expect(getByText('Expofranquicias Ecuador')).toBeInTheDocument()
+    expect(getByText('Franquicias Disponibles')).toBeInTheDocument()
+    expect(queryByText('Buscar Franquicias')).not.toBeInTheDocument()
+    expect(queryByText('Dirección')).not.toBeInTheDocument()
   })
 })
