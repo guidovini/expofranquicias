@@ -80,7 +80,7 @@ class ControlBar extends Component {
 
   render() {
     return (
-      <div className="control-bar" id="myHeader">
+      <div className="control-bar" id="myHeader" data-testid="controlBar">
         <div
           className="field is-horizontal"
           // style={{ flexBasis: '16rem' }}
