@@ -1,5 +1,8 @@
 const getCountryList = franchises => {
   const list = []
+  if (typeof franchises !== 'object') {
+    return []
+  }
   franchises.map(franchise => {
     return list.push(franchise.paisOrigen)
   })
