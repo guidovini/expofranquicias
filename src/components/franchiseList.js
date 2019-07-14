@@ -12,7 +12,7 @@ import getCountryList from '../utils/getCountryList'
 // Styles
 import franchiseListStyles from './franchiseList.module.scss'
 
-class FranchiseList extends Component {
+export class PureFranchiseList extends Component {
   state = {
     orderBy: 'alpha',
     filterBy: 'all',
@@ -58,6 +58,27 @@ class FranchiseList extends Component {
     this.setState({ searchBy: '' })
   }
 
+  renderFranchises = filteredFranchises => {
+    if (filteredFranchises.length > 0) {
+      return filteredFranchises.map(franchise => {
+        return (
+          franchise.inversion && (
+            <FranchiseItem
+              franchise={franchise}
+              key={franchise.id || franchise.nombre}
+            />
+          )
+        )
+      })
+    } else {
+      return (
+        <p data-testid="franchise-list-no-data">
+          Estamos agregando más franquicias.
+        </p>
+      )
+    }
+  }
+
   render() {
     const { orderBy, filterBy, searchBy, franchises, countryList } = this.state
     const filteredFranchises = franchisesSelector(
@@ -68,7 +89,7 @@ class FranchiseList extends Component {
     )
 
     return (
-      <div>
+      <div data-testid="franchise-list">
         <ControlBar
           countries={countryList}
           handleOrder={this.handleOrder}
@@ -80,16 +101,7 @@ class FranchiseList extends Component {
           searchBy={searchBy}
         />
         <div className={franchiseListStyles.column} id="stickyContent">
-          {filteredFranchises.map(franchise => {
-            return (
-              franchise.inversion && (
-                <FranchiseItem
-                  franchise={franchise}
-                  key={franchise.id || franchise.nombre}
-                />
-              )
-            )
-          })}
+          {this.renderFranchises(filteredFranchises)}
         </div>
       </div>
     )
@@ -116,14 +128,14 @@ export const query = graphql`
   }
 `
 
-export default props => (
+export const FranchiseList = props => (
   <StaticQuery
     query={query}
     render={data => {
       const queryData = data.allGoogleSheetListadoFranquiciasRow.nodes
-      return <FranchiseList queryData={queryData} {...props} />
+      return <PureFranchiseList queryData={queryData} {...props} />
     }}
   />
 )
 
-// export default FranchiseList
+export default FranchiseList
