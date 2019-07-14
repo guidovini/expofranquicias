@@ -28,7 +28,10 @@ const Franchise = ({ franchise }) => {
 
   return (
     <div className={franchiseItemStyles.container}>
-      <div className={franchiseItemStyles.imageBox}>
+      <div
+        className={franchiseItemStyles.imageBox}
+        data-testid="franchise-logo"
+      >
         <Logo imgName={`${nombre}.jpg`} />
       </div>
 
@@ -39,20 +42,29 @@ const Franchise = ({ franchise }) => {
       }
 
       <div className={franchiseItemStyles.data}>
-        <h3 className="title is-4 has-text-grey-dark">{nombre}</h3>
+        <h3
+          className="title is-4 has-text-grey-dark"
+          data-testid="franchise-name"
+        >
+          {nombre}
+        </h3>
         <p
           className="subtitle is-6 has-text-grey-dark"
           style={{
             fontSize: '1.125rem',
             opacity: '0.7',
           }}
+          data-testid="franchise-concept"
         >
           {concepto}
         </p>
 
         <div className={franchiseItemStyles.iconData}>
           {aniosOperacion && (
-            <div className={franchiseItemStyles.iconRow}>
+            <div
+              className={franchiseItemStyles.iconRow}
+              data-testid="franchise-years"
+            >
               <span
                 className="icon is-medium"
                 style={{ color: '#aaa', marginRight: '0.4rem' }}
@@ -76,7 +88,10 @@ const Franchise = ({ franchise }) => {
           )}
 
           {numeroLocales && (
-            <div className={franchiseItemStyles.iconRow}>
+            <div
+              className={franchiseItemStyles.iconRow}
+              data-testid="franchise-locations"
+            >
               <span
                 className="icon is-medium"
                 style={{ color: '#aaa', marginRight: '0.4rem' }}
@@ -100,7 +115,10 @@ const Franchise = ({ franchise }) => {
           )}
 
           {tamanoLocal && (
-            <div className={franchiseItemStyles.iconRow}>
+            <div
+              className={franchiseItemStyles.iconRow}
+              data-testid="franchise-size"
+            >
               <span
                 className="icon is-medium"
                 style={{ color: '#aaa', marginRight: '0.4rem' }}
@@ -125,21 +143,27 @@ const Franchise = ({ franchise }) => {
 
         <div className={franchiseItemStyles.labelData}>
           {disponibilidadTerritorial && (
-            <FranchiseField
-              field={'disponibilidadTerritorial'}
-              fieldContent={disponibilidadTerritorial}
-            />
+            <div data-testid="franchise-territory">
+              <FranchiseField
+                field={'disponibilidadTerritorial'}
+                fieldContent={disponibilidadTerritorial}
+              />
+            </div>
           )}
 
           {paisOrigen && (
-            <FranchiseField field={'paisOrigen'} fieldContent={paisOrigen} />
+            <div data-testid="franchise-countryOrigin">
+              <FranchiseField field={'paisOrigen'} fieldContent={paisOrigen} />
+            </div>
           )}
 
           {tiempoRetornoInversion && (
-            <FranchiseField
-              field={'tiempoRetornoInversion'}
-              fieldContent={tiempoRetornoInversion}
-            />
+            <div data-testid="franchise-roi">
+              <FranchiseField
+                field={'tiempoRetornoInversion'}
+                fieldContent={tiempoRetornoInversion}
+              />
+            </div>
           )}
         </div>
 
@@ -151,6 +175,7 @@ const Franchise = ({ franchise }) => {
             alignContent: 'flex-end',
             flexGrow: '1',
           }}
+          data-testid="franchise-investment"
         >
           <h4 className={franchiseItemStyles.priceTitle}>
             Inversión Aproximada Desde
