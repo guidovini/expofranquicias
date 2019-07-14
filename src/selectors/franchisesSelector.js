@@ -1,4 +1,7 @@
 const franchisesSelector = (franchises, orderBy, filterBy, searchBy) => {
+  if (typeof franchises !== 'object') {
+    return []
+  }
   return franchises
     .filter(franchise => {
       const searchText = searchBy.toLowerCase().trim()
