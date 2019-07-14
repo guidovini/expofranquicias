@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Franchise Item Should_RenderFranchiseItemCorrectly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="imageBox"
+      data-testid="franchise-logo"
+    />
+    <div
+      class="data"
+    >
+      <h3
+        class="title is-4 has-text-grey-dark"
+        data-testid="franchise-name"
+      >
+        Franquicia Nombre 1
+      </h3>
+      <p
+        class="subtitle is-6 has-text-grey-dark"
+        data-testid="franchise-concept"
+        style="font-size: 1.125rem; opacity: 0.7;"
+      >
+        Franquicia Concepto 1
+      </p>
+      <div
+        class="iconData"
+      >
+        <div
+          class="iconRow"
+          data-testid="franchise-years"
+        >
+          <span
+            class="icon is-medium"
+            style="color: rgb(170, 170, 170); margin-right: 0.4rem;"
+          >
+            <i
+              class="fas fa-lg fa-business-time"
+            />
+          </span>
+          <span
+            class="fieldContent"
+            style="margin-right: 0.3em;"
+          >
+            23
+          </span>
+          <span
+            class="fieldTitle"
+            style="margin-right: 1.5em;"
+          >
+             
+            años de operación
+          </span>
+        </div>
+        <div
+          class="iconRow"
+          data-testid="franchise-locations"
+        >
+          <span
+            class="icon is-medium"
+            style="color: rgb(170, 170, 170); margin-right: 0.4rem;"
+          >
+            <i
+              class="fas fa-lg fa-store"
+            />
+          </span>
+          <span
+            class="fieldContent"
+            style="margin-right: 0.3em;"
+          >
+            7
+          </span>
+          <span
+            class="fieldTitle"
+            style="margin-right: 1.5em;"
+          >
+             
+            locales
+          </span>
+        </div>
+        <div
+          class="iconRow"
+          data-testid="franchise-size"
+        >
+          <span
+            class="icon is-medium"
+            style="color: rgb(170, 170, 170); margin-right: 0.4rem;"
+          >
+            <i
+              class="fas fa-lg fa-ruler"
+            />
+          </span>
+          <span
+            class="fieldContent"
+            style="margin-right: 0.3rem;"
+          >
+            69 
+          </span>
+          <span
+            class="fieldTitle"
+            style="margin-right: 0.65rem;"
+          >
+            m
+            <sup>
+              2
+            </sup>
+          </span>
+        </div>
+      </div>
+      <div
+        class="labelData"
+      >
+        <div
+          data-testid="franchise-territory"
+        >
+          <div
+            class="field"
+          >
+            <h4
+              class="fieldTitle"
+            >
+              Disponibilidad:
+            </h4>
+            <p
+              class="fieldContent"
+            >
+              Todo el Ecuador
+            </p>
+          </div>
+        </div>
+        <div
+          data-testid="franchise-countryOrigin"
+        >
+          <div
+            class="field"
+          >
+            <h4
+              class="fieldTitle"
+            >
+              País de Origen:
+            </h4>
+            <img
+              alt="Ecuador flag"
+              class="flag"
+              src="test-file-stub"
+              title="Ecuador"
+            />
+          </div>
+        </div>
+        <div
+          data-testid="franchise-roi"
+        >
+          <div
+            class="field"
+          >
+            <h4
+              class="fieldTitle"
+            >
+              Tiempo ROI:
+            </h4>
+            <p
+              class="fieldContent"
+            >
+              12 meses
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="field"
+        data-testid="franchise-investment"
+        style="flex-direction: column; justify-content: flex-end; align-content: flex-end; flex-grow: 1;"
+      >
+        <h4
+          class="priceTitle"
+        >
+          Inversión Aproximada Desde
+        </h4>
+        <p
+          class="price"
+        >
+          $ 100,000
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

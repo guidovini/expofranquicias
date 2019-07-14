@@ -10,12 +10,8 @@ describe('Header', () => {
   })
 
   test('Should_RenderHeaderElements', () => {
-    const { getByText, queryByText } = render(
-      <Header siteTitle="Default Starter" />
-    )
+    const { getByText } = render(<Header siteTitle="Default Starter" />)
     expect(getByText('Expofranquicias Ecuador')).toBeInTheDocument()
     expect(getByText('Franquicias Disponibles')).toBeInTheDocument()
-    expect(queryByText('Buscar Franquicias')).not.toBeInTheDocument()
-    expect(queryByText('Dirección')).not.toBeInTheDocument()
   })
 })

@@ -1,0 +1,1 @@
+test('franchise selector test', () => {})
