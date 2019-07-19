@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 
 import currencyFormatter from '../currencyFormatter'
 import getCountry from '../getCountryList'
@@ -51,20 +50,6 @@ describe('Utils', () => {
       const size = '20 m2'
       expect(removeSquaredMeters(size)).toBe('20 ')
       expect(removeSquaredMeters(size)).not.toBe('20 m2')
-    })
-  })
-
-  describe('Render Categories', () => {
-    test('Should_RenderCategories_When_MultipleCategories', () => {
-      const multipleCategories = 'Restaurant;Food;Coffee'
-      const oneCategory = 'Bar'
-
-      expect(renderCategories(multipleCategories)).not.toEqual(
-        <p className="subCategory">Restaurant</p>
-      )
-      expect(renderCategories(oneCategory)).toEqual(
-        <p className="subCategory">Bar</p>
-      )
     })
   })
 })
