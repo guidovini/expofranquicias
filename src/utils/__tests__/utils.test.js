@@ -1,9 +1,6 @@
-import React from 'react'
-
 import currencyFormatter from '../currencyFormatter'
 import getCountry from '../getCountryList'
 import removeSquaredMeters from '../removeSquaredMeters'
-import renderCategories from '../renderCategories'
 
 describe('Utils', () => {
   describe('Format Currency', () => {
