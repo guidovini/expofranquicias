@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import FranchiseList from '../components/franchiseList'
+import FranchiseList from '../components/FranchiseList'
 
 const FranquiciasDisponibles = () => {
   return (

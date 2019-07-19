@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { StaticQuery } from 'gatsby' // mocked
 
-import { PureFranchiseList as FranchiseList } from '../franchiseList'
+import { PureFranchiseList as FranchiseList } from '../FranchiseList'
 
 // Created Using the query from FranchiseList.js
 const queryData = [

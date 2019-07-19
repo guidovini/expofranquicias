@@ -1,8 +1,8 @@
 import React from 'react'
 
 // Components
-import Logo from './logo'
-import FranchiseField from './franchiseField'
+import Logo from './Logo'
+import FranchiseField from './FranchiseField'
 
 // Utils
 import currencyFormatter from '../utils/currencyFormatter'
@@ -12,7 +12,7 @@ import renderCategories from '../utils/renderCategories'
 // Styles
 import franchiseItemStyles from './franchiseItem.module.scss'
 
-const Franchise = ({ franchise }) => {
+const FranchiseItem = ({ franchise }) => {
   const {
     nombre,
     categoria,
@@ -192,4 +192,4 @@ const Franchise = ({ franchise }) => {
   )
 }
 
-export default Franchise
+export default FranchiseItem

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
 // Components
-import FranchiseItem from './franchiseItem'
-import ControlBar from './controlBar'
+import FranchiseItem from './FranchiseItem'
+import ControlBar from './ControlBar'
 
 // Utils
 import franchisesSelector from '../selectors/franchisesSelector'

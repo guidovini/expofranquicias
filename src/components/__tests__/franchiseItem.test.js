@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { StaticQuery } from 'gatsby' // mocked
 
-import FranchiseItem from '../franchiseItem'
+import FranchiseItem from '../FranchiseItem'
 
 const franchise = {
   nombre: 'Franquicia Nombre 1',
