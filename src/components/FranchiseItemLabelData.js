@@ -3,6 +3,9 @@ import React from 'react'
 // Components
 import FranchiseField from './FranchiseField'
 
+// Utils
+import toTitleCase from '../utils/toTitleCase'
+
 // Styles
 import franchiseItemStyles from './franchiseItem.module.scss'
 
@@ -26,7 +29,10 @@ const FranchiseItemLabelData = ({ franchise }) => {
 
       {paisOrigen && (
         <div data-testid="franchise-countryOrigin">
-          <FranchiseField field={'paisOrigen'} fieldContent={paisOrigen} />
+          <FranchiseField
+            field={'paisOrigen'}
+            fieldContent={toTitleCase(paisOrigen)}
+          />
         </div>
       )}
 

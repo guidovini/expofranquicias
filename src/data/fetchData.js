@@ -24,7 +24,7 @@ const fetchData = () => {
   const data = useStaticQuery(query)
 
   const franchises = data.allGoogleSheetListadoFranquiciasRow.nodes
-  // console.log('franchises', franchises)
+
   return franchises
 }
 
