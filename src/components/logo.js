@@ -40,7 +40,10 @@ const Logo = ({ imgName }) => (
       )
 
       if (!image) {
-        return null
+        const image = data.allImageSharp.edges.find(
+          edge => edge.node.fluid.originalName === 'franchise.png'
+        )
+        return <Img fluid={image.node.fluid} />
       }
 
       return <Img fluid={image.node.fluid} />
