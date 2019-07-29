@@ -78,7 +78,7 @@ const FranchiseItemIconData = ({ franchise }) => {
           </span>
           <span
             className={franchiseItemStyles.fieldContent}
-            style={{ marginRight: '0.3rem' }}
+            style={{ marginRight: '0.3rem', marginBottom: '-0.25rem' }}
           >
             {removeSquaredMeters(tamanoLocal)}
           </span>
