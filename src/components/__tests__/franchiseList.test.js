@@ -69,6 +69,18 @@ beforeEach(() => {
               },
             },
           },
+          {
+            node: {
+              fluid: {
+                base64: `pretend-i-am-a-base64-encoded-image`,
+                aspectRatio: 1,
+                src: 'this is the src',
+                srcSet: `asdfasdf`,
+                sizes: `100 200 300`,
+                originalName: 'franchise.png',
+              },
+            },
+          },
         ],
       },
     })
@@ -85,6 +97,18 @@ beforeEach(() => {
                 srcSet: `asdfasdf`,
                 sizes: `100 200 300`,
                 originalName: 'Autoseguro.jpg',
+              },
+            },
+          },
+          {
+            node: {
+              fluid: {
+                base64: `pretend-i-am-a-base64-encoded-image`,
+                aspectRatio: 1,
+                src: 'this is the src',
+                srcSet: `asdfasdf`,
+                sizes: `100 200 300`,
+                originalName: 'franchise.png',
               },
             },
           },
