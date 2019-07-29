@@ -1,3 +1,9 @@
+let activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+console.log(`Using environment config: '${activeEnv}'`)
+require('dotenv').config({
+  path: `.env.${activeEnv}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Expofranquicias Ecuador`,
@@ -13,7 +19,19 @@ module.exports = {
         // spreadsheetId: '1Lj6EfELbM2KuHC5lmftxrR9-j4tu9Oi-MrCvTKnatpQ', // test sheet id
         spreadsheetId: '1Lj6EfELbM2KuHC5lmftxrR9-j4tu9Oi-MrCvTKnatpQ', // production sheet id
         worksheetTitle: 'ListadoFranquicias',
-        credentials: require('./config/client_secret.json'),
+        credentials: {
+          type: process.env.GOOGLE_SHEETS_TYPE,
+          project_id: process.env.GOOGLE_SHEETS_PROJECT_ID,
+          private_key_id: process.env.GOOGLE_SHEETS_PRIVATE_KEY_ID,
+          private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY,
+          client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
+          client_id: process.env.GOOGLE_SHEETS_CLIENT_ID,
+          auth_uri: process.env.GOOGLE_SHEETS_AUTH_URI,
+          token_uri: process.env.GOOGLE_SHEETS_TOKEN_URI,
+          auth_provider_x509_cert_url:
+            process.env.GOOGLE_SHEETS_AUTH_PROVIDER_CERT_URL,
+          client_x509_cert_url: process.env.GOOGLE_SHEETS_CLIENT_CERT_URL,
+        },
       },
     },
     `gatsby-plugin-sitemap`,

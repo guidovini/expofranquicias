@@ -94,6 +94,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## Changes
 
+- 2019-07-29: Add and sync images
+- 2019-07-28: Add and sync new data
 - 2019-07-19: Implement e2e tests using `cypress`
 - 2019-07-19: Refactor code
 - 2019-07-14: Implement testing
