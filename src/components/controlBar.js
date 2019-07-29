@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import toTitleCase from '../utils/toTitleCase'
+
 import ControlBarStyles from './controlBar.module.scss'
 
 class ControlBar extends Component {
@@ -54,10 +56,13 @@ class ControlBar extends Component {
       >
         <option value="all">Todos</option>
         {countries.map(country => {
+          const countryToTitleCase = toTitleCase(country)
           return (
-            <option value={`${country}`} key={country}>
-              {country}
-            </option>
+            country && (
+              <option value={`${country}`} key={country}>
+                {countryToTitleCase}
+              </option>
+            )
           )
         })}
       </select>
