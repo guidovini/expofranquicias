@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Logo from './logo'
+import Logo from './Logo'
 
 // Styles
 import franchiseItemStyles from './franchiseItem.module.scss'

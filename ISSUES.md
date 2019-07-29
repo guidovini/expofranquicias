@@ -5,3 +5,5 @@
 1. Franchises should show default image when there is no image for them. (SOLVED)
 1. Franchises with empty `pais-origen`.
 1. ControlBox, filter and format fields. (SOLVED)
+1. `tamano-local` size css styling
+1. Camel Case problem caused when running `npm start` on VSCode. There is no error in bash.

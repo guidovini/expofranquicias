@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import toTitleCase from '../utils/toTitleCase'
 
-import ControlBarStyles from './controlBar.module.scss'
+import controlBarStyles from './controlBar.module.scss'
 
 class ControlBar extends Component {
   componentDidMount() {
@@ -134,7 +134,7 @@ class ControlBar extends Component {
               e.preventDefault()
               this.props.resetControlBar()
             }}
-            className={ControlBarStyles.buttonTrash}
+            className={controlBarStyles.buttonTrash}
             // className={'delete is-medium'}
             title="Reiniciar opciones"
             // style={{ margin: '5px' }}

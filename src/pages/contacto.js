@@ -1,27 +1,27 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 
-import ContactoStyles from './contacto.module.scss'
+import contactoStyles from './contacto.module.scss'
 
 const Contacto = () => {
   return (
     <Layout>
       <SEO title="Contacto" />
       <h2 className="title is-2 has-text-centered">Contacto</h2>
-      <p className={ContactoStyles.textCentered}>
+      <p className={contactoStyles.textCentered}>
         Para obtener más información, comuníquese con nosotros.
       </p>
       <div className="column is-6 is-offset-3">
-        <p className={ContactoStyles.text}>
+        <p className={contactoStyles.text}>
           <strong>Teléfono:</strong> (02) 255 4653; (02) 254 1257
         </p>
-        <p className={ContactoStyles.text}>
+        <p className={contactoStyles.text}>
           <strong>E-mail:</strong>{' '}
           <a href="mailto:info@ecuafranquicias.com">info@ecuafranquicias.com</a>
         </p>
-        <p className={ContactoStyles.text}>
+        <p className={contactoStyles.text}>
           <strong>Dirección:</strong> Av. América N31-42 y San Gabriel. Edificio
           Megaron PB Oficina 2. Quito - Ecuador.
         </p>

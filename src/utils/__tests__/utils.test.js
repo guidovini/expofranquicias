@@ -1,6 +1,7 @@
 import currencyFormatter from '../currencyFormatter'
 import getCountry from '../getCountryList'
 import removeSquaredMeters from '../removeSquaredMeters'
+import toTitleCase from '../toTitleCase'
 
 describe('Utils', () => {
   describe('Format Currency', () => {
@@ -47,6 +48,16 @@ describe('Utils', () => {
       const size = '20 m2'
       expect(removeSquaredMeters(size)).toBe('20 ')
       expect(removeSquaredMeters(size)).not.toBe('20 m2')
+    })
+  })
+
+  describe('To Title Case', () => {
+    test('Should_TransformTextToTitleCase', () => {
+      const text = 'test text'
+      expect(toTitleCase(text)).toBe('Test Text')
+      expect(toTitleCase(text)).not.toBe('test Text')
+      expect(toTitleCase(text)).not.toBe('Test text')
+      expect(toTitleCase(text)).not.toBe('testText')
     })
   })
 })
