@@ -71,11 +71,7 @@ export class PureFranchiseList extends Component {
         )
       })
     } else {
-      return (
-        <p data-testid="franchise-list-no-data">
-          Estamos agregando más franquicias.
-        </p>
-      )
+      return <p data-testid="franchise-list-no-data">No hay resultados.</p>
     }
   }
 
