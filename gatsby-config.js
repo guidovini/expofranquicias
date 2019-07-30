@@ -21,10 +21,7 @@ module.exports = {
         credentials: {
           type: 'service_account',
           project_id: process.env.GOOGLE_SHEETS_PROJECT_ID,
-          private_key_id: process.env.GOOGLE_SHEETS_PRIVATE_KEY,
-
-          // private_key: JSON.parse(process.env.GOOGLE_SHEETS_PRIVATE_KEY),
-          // private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY,
+          private_key_id: process.env.GOOGLE_SHEETS_PRIVATE_KEY_ID,
           private_key: (activeEnv = 'development'
             ? process.env.GOOGLE_SHEETS_PRIVATE_KEY
             : JSON.parse(process.env.GOOGLE_SHEETS_PRIVATE_KEY)),
