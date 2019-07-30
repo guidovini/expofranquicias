@@ -4,6 +4,7 @@ console.log(`Using environment config: '${activeEnv}'`)
 require('dotenv').config({
   path: `.env.${activeEnv}`,
 })
+console.log(process.env.GOOGLE_SHEETS_PRIVATE_KEY)
 module.exports = {
   siteMetadata: {
     title: `Expofranquicias Ecuador`,
