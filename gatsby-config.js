@@ -4,7 +4,6 @@ console.log(`Using environment config: '${activeEnv}'`)
 require('dotenv').config({
   path: `.env.${activeEnv}`,
 })
-console.log(process.env.GOOGLE_SHEETS_PRIVATE_KEY)
 module.exports = {
   siteMetadata: {
     title: `Expofranquicias Ecuador`,
@@ -24,7 +23,7 @@ module.exports = {
           type: 'service_account',
           project_id: process.env.GOOGLE_SHEETS_PROJECT_ID,
           private_key_id: process.env.GOOGLE_SHEETS_PRIVATE_KEY_ID,
-          private_key: JSON.parse(process.env.GOOGLE_SHEETS_PRIVATE_KEY),
+          private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY,
           client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
           client_id: process.env.GOOGLE_SHEETS_CLIENT_ID,
           auth_uri: 'https://accounts.google.com/o/oauth2/auth',

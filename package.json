@@ -6,6 +6,7 @@
   "author": "Guido Santillan <info@guidosantillan.com>",
   "dependencies": {
     "bulma": "^0.7.5",
+    "dotenv": "^8.0.0",
     "gatsby": "^2.8.5",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-google-analytics": "^2.0.21",
@@ -31,7 +32,6 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "babel-preset-gatsby": "^0.2.3",
-    "dotenv": "^8.0.0",
     "env-cmd": "^9.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",

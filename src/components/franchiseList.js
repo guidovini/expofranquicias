@@ -12,7 +12,7 @@ import getCountryList from '../utils/getCountryList'
 // Styles
 import franchiseListStyles from './franchiseList.module.scss'
 
-export class PureFranchiseList extends Component {
+class PureFranchiseList extends Component {
   state = {
     orderBy: 'alpha',
     filterBy: 'all',
@@ -104,7 +104,7 @@ export class PureFranchiseList extends Component {
   }
 }
 
-export const query = graphql`
+const query = graphql`
   query {
     allGoogleSheetListadoFranquiciasRow {
       nodes {
@@ -124,7 +124,7 @@ export const query = graphql`
   }
 `
 
-export const FranchiseList = props => (
+const FranchiseList = props => (
   <StaticQuery
     query={query}
     render={data => {
