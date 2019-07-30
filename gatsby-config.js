@@ -19,7 +19,11 @@ module.exports = {
           project_id: process.env.GOOGLE_SHEETS_PROJECT_ID,
           private_key_id: process.env.GOOGLE_SHEETS_PRIVATE_KEY_ID,
           // private_key: JSON.parse(process.env.GOOGLE_SHEETS_PRIVATE_KEY),
-          private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY,
+          // private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY,
+          private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY.replace(
+            /\\n/g,
+            '\n'
+          ),
           client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
           client_id: process.env.GOOGLE_SHEETS_CLIENT_ID,
           auth_uri: 'https://accounts.google.com/o/oauth2/auth',
