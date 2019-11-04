@@ -5,7 +5,6 @@
   padding: 1rem;
   padding-bottom: 0.25rem;
   margin-top: 3rem;
-  // margin-bottom: 2rem;
 
   display: flex;
   flex-direction: row;
@@ -24,14 +23,6 @@
     margin-top: 0;
   }
 
-  // @at-root {
-  //   body.header-not-at-top {
-  //     // IF ACTIVATED CAUSES AN ERROR
-  //     // padding-top: 44px;
-  //     // padding-top: 7rem; //! THIS IS THE SOLUTION, NOW FIND THE ERROR!
-  //   }
-  // }
-
   @media only screen and (max-width: 54.5em) {
     align-items: stretch;
     padding: 0.75rem;
@@ -39,7 +30,6 @@
 
   @media only screen and (max-width: 37.5em) {
     align-items: stretch;
-    // padding: 0.75rem;
   }
 }
 
