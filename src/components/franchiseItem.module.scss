@@ -3,15 +3,9 @@
 .container {
   margin-bottom: 3rem;
   margin-right: 3rem;
-  // padding: 1.25rem; // PADDING BOX
   background-color: white;
   display: flex;
   flex-direction: column;
-  // flex-wrap: wrap;
-  // flex-grow: 1;
-  // align-content: space-between;
-  // align-items: flex-end;
-  // max-width: 25rem; // 25 * 16 = 400px
   width: 22rem; // 25 * 16 = 400px
 
   border-radius: 1.5rem;
@@ -26,23 +20,11 @@
     // cursor: pointer;
   }
 
-  &:nth-child(3n + 3) {
-    margin-right: 0;
-  }
-
   @media only screen and (max-width: 80em) {
     // max 1280
     margin-bottom: 2rem;
     margin-right: 2rem;
-    width: 22rem;
-
-    &:nth-child(3n + 3) {
-      margin-right: 2rem;
-    }
-
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
+    width: 20rem;
   }
 
   @media only screen and (max-width: 56.25em) {
@@ -50,26 +32,11 @@
     margin-bottom: 3rem;
     margin-right: 0;
     width: 30rem;
-
-    &:nth-child(3n + 3) {
-      margin-right: 0;
-    }
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
   }
-
-  // @media only screen and (max-width: 37.5em) {
-  //   //max 600
-  //   margin-bottom: 3rem;
-  //   width: 30rem;
-  // }
 }
 
 .image-box {
-  // margin-bottom: 1.25rem; // PADDING BOX
   min-height: 20rem;
-  // border-radius: 1.5rem;
 
   display: flex;
   flex-direction: column;
@@ -117,9 +84,7 @@
 
 .price {
   font-size: 1.8rem;
-  // font-family: 'Roboto';
   color: $primary-color;
-  // font-weight: 600;
 }
 
 .price-locations-title {
@@ -133,14 +98,9 @@
 .price-locations {
   font-size: 1.2rem;
   color: $dark;
-  // font-weight: 700;
 }
 
 .category {
-  // position: absolute;
-  // // width: 100%;
-  // z-index: 999;
-
   opacity: 0.95;
 
   margin-bottom: 0.8rem;
@@ -154,11 +114,6 @@
 .sub-category {
   color: #eee;
   background-color: $primary-color;
-  // color: $primary-color;
-  // background-color: #eee;
-
-  // border-style: solid;
-  // border-width: 0.5px;
   border-radius: 0.5rem;
 
   margin-bottom: 0.2rem;
@@ -167,7 +122,6 @@
   text-transform: capitalize;
   font-weight: 400;
   font-size: 1rem;
-  // letter-spacing: 0.15rem;
 
   justify-self: flex-end;
 }
