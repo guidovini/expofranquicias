@@ -1,0 +1,538 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Franchise List Should_RenderFranchiseListCorrectly 1`] = `
+<div>
+  <div
+    data-testid="franchise-list"
+  >
+    <div
+      class="control-bar"
+      data-testid="controlBar"
+      id="myHeader"
+    >
+      <div
+        class="field is-horizontal"
+      >
+        <div
+          class="field-label is-normal"
+        >
+          <label
+            class="label"
+          >
+            Ordenar:
+          </label>
+        </div>
+        <div
+          class="control"
+        >
+          <div
+            class="select"
+          >
+            <select>
+              <option
+                value="alpha"
+              >
+                Alfabeticamente
+              </option>
+              <option
+                value="lower-price"
+              >
+                Menor Precio
+              </option>
+              <option
+                value="higher-price"
+              >
+                Mayor Precio
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div
+        class="field is-horizontal"
+      >
+        <div
+          class="field-label is-normal"
+        >
+          <label
+            class="label"
+          >
+            Filtro por país:
+          </label>
+        </div>
+        <div
+          class="control has-icons-left"
+        >
+          <span
+            class="select"
+          >
+            <select
+              class="select"
+            >
+              <option
+                value="all"
+              >
+                Todos
+              </option>
+              <option
+                value="Ecuador"
+              >
+                Ecuador
+              </option>
+              <option
+                value="Estados Unidos"
+              >
+                Estados Unidos
+              </option>
+            </select>
+          </span>
+          <span
+            class="icon is-small is-left"
+          >
+            <i
+              class="fas fa-globe"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        class="field is-horizontal"
+      >
+        <div
+          class="field-label is-normal"
+        >
+          <label
+            class="label"
+          >
+            Buscar:
+          </label>
+        </div>
+        <div
+          class="control is-expandable"
+          style="flex-basis: 28rem;"
+        >
+          <input
+            class="input"
+            placeholder="Por nombre de franquicia o concepto de negocio"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="buttonTrash"
+          title="Reiniciar opciones"
+        >
+          <span
+            class="icon"
+          >
+            <i
+              class="fas fa-lg fa-trash"
+            />
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="column"
+      id="stickyContent"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="imageBox"
+          data-testid="franchise-logo"
+        >
+          <div
+            class=" gatsby-image-wrapper"
+            style="position: relative; overflow: hidden;"
+          >
+            <div
+              style="width: 100%; padding-bottom: 100%;"
+            />
+            <img
+              alt=""
+              src="pretend-i-am-a-base64-encoded-image"
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+            />
+            <picture>
+              <img
+                alt=""
+                loading="lazy"
+                sizes="100 200 300"
+                src="this is the src"
+                srcset="asdfasdf"
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+              />
+            </picture>
+            <noscript>
+              &lt;picture&gt;&lt;img loading="lazy" sizes="100 200 300" srcset="asdfasdf" src="this is the src" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            </noscript>
+          </div>
+        </div>
+        <div
+          class="data"
+        >
+          <h3
+            class="title is-4 has-text-grey-dark"
+            data-testid="franchise-name"
+          >
+            Autoseguro
+          </h3>
+          <p
+            class="subtitle is-6 has-text-grey-dark"
+            data-testid="franchise-concept"
+            style="font-size: 1.125rem; opacity: 0.7;"
+          >
+            Comercialización de Purificadores de Agua
+          </p>
+          <div
+            class="iconData"
+          >
+            <div
+              class="iconRow"
+              data-testid="franchise-years"
+            >
+              <span
+                class="icon is-medium"
+                style="color: rgb(170, 170, 170); margin-right: 0.4rem;"
+              >
+                <i
+                  class="fas fa-lg fa-business-time"
+                />
+              </span>
+              <span
+                class="fieldContent"
+                style="margin-right: 0.3em;"
+              >
+                37
+              </span>
+              <span
+                class="fieldTitle"
+                style="margin-right: 1.5em;"
+              >
+                 
+                años de operación
+              </span>
+            </div>
+            <div
+              class="iconRow"
+              data-testid="franchise-size"
+            >
+              <span
+                class="icon is-medium"
+                style="color: rgb(170, 170, 170); margin-right: 0.4rem;"
+              >
+                <i
+                  class="fas fa-lg fa-ruler"
+                />
+              </span>
+              <span
+                class="fieldContent"
+                style="margin-right: 0.3rem;"
+              >
+                6 - 16 
+              </span>
+              <span
+                class="fieldTitle"
+                style="margin-right: 0.65rem;"
+              >
+                m
+                <sup>
+                  2
+                </sup>
+              </span>
+            </div>
+          </div>
+          <div
+            class="labelData"
+          >
+            <div
+              data-testid="franchise-territory"
+            >
+              <div
+                class="field"
+              >
+                <h4
+                  class="fieldTitle"
+                >
+                  Disponibilidad:
+                </h4>
+                <p
+                  class="fieldContent"
+                >
+                  Todo el Ecuador
+                </p>
+              </div>
+            </div>
+            <div
+              data-testid="franchise-countryOrigin"
+            >
+              <div
+                class="field"
+              >
+                <h4
+                  class="fieldTitle"
+                >
+                  País de Origen:
+                </h4>
+                <img
+                  alt="Estados Unidos flag"
+                  class="flag"
+                  src="test-file-stub"
+                  title="Estados Unidos"
+                />
+              </div>
+            </div>
+            <div
+              data-testid="franchise-roi"
+            >
+              <div
+                class="field"
+              >
+                <h4
+                  class="fieldTitle"
+                >
+                  Tiempo ROI:
+                </h4>
+                <p
+                  class="fieldContent"
+                >
+                  &lt; 6 meses
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="field"
+            data-testid="franchise-investment"
+            style="flex-direction: column; justify-content: flex-end; align-content: flex-end; flex-grow: 1;"
+          >
+            <h4
+              class="priceTitle"
+            >
+              Inversión Aproximada Desde
+            </h4>
+            <p
+              class="price"
+            >
+              $ 27,500
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container"
+      >
+        <div
+          class="imageBox"
+          data-testid="franchise-logo"
+        >
+          <div
+            class=" gatsby-image-wrapper"
+            style="position: relative; overflow: hidden;"
+          >
+            <div
+              style="width: 100%; padding-bottom: 100%;"
+            />
+            <img
+              alt=""
+              src="pretend-i-am-a-base64-encoded-image"
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+            />
+            <picture>
+              <img
+                alt=""
+                loading="lazy"
+                sizes="100 200 300"
+                src="this is the src"
+                srcset="asdfasdf"
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+              />
+            </picture>
+            <noscript>
+              &lt;picture&gt;&lt;img loading="lazy" sizes="100 200 300" srcset="asdfasdf" src="this is the src" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            </noscript>
+          </div>
+        </div>
+        <div
+          class="data"
+        >
+          <h3
+            class="title is-4 has-text-grey-dark"
+            data-testid="franchise-name"
+          >
+            Test franchise
+          </h3>
+          <p
+            class="subtitle is-6 has-text-grey-dark"
+            data-testid="franchise-concept"
+            style="font-size: 1.125rem; opacity: 0.7;"
+          >
+            Resto - Bar - Karaoke
+          </p>
+          <div
+            class="iconData"
+          >
+            <div
+              class="iconRow"
+              data-testid="franchise-years"
+            >
+              <span
+                class="icon is-medium"
+                style="color: rgb(170, 170, 170); margin-right: 0.4rem;"
+              >
+                <i
+                  class="fas fa-lg fa-business-time"
+                />
+              </span>
+              <span
+                class="fieldContent"
+                style="margin-right: 0.3em;"
+              >
+                17
+              </span>
+              <span
+                class="fieldTitle"
+                style="margin-right: 1.5em;"
+              >
+                 
+                años de operación
+              </span>
+            </div>
+            <div
+              class="iconRow"
+              data-testid="franchise-locations"
+            >
+              <span
+                class="icon is-medium"
+                style="color: rgb(170, 170, 170); margin-right: 0.4rem;"
+              >
+                <i
+                  class="fas fa-lg fa-store"
+                />
+              </span>
+              <span
+                class="fieldContent"
+                style="margin-right: 0.3em;"
+              >
+                11
+              </span>
+              <span
+                class="fieldTitle"
+                style="margin-right: 1.5em;"
+              >
+                 
+                locales
+              </span>
+            </div>
+            <div
+              class="iconRow"
+              data-testid="franchise-size"
+            >
+              <span
+                class="icon is-medium"
+                style="color: rgb(170, 170, 170); margin-right: 0.4rem;"
+              >
+                <i
+                  class="fas fa-lg fa-ruler"
+                />
+              </span>
+              <span
+                class="fieldContent"
+                style="margin-right: 0.3rem;"
+              >
+                200 - 250 
+              </span>
+              <span
+                class="fieldTitle"
+                style="margin-right: 0.65rem;"
+              >
+                m
+                <sup>
+                  2
+                </sup>
+              </span>
+            </div>
+          </div>
+          <div
+            class="labelData"
+          >
+            <div
+              data-testid="franchise-territory"
+            >
+              <div
+                class="field"
+              >
+                <h4
+                  class="fieldTitle"
+                >
+                  Disponibilidad:
+                </h4>
+                <p
+                  class="fieldContent"
+                >
+                  Todo el Ecuador
+                </p>
+              </div>
+            </div>
+            <div
+              data-testid="franchise-countryOrigin"
+            >
+              <div
+                class="field"
+              >
+                <h4
+                  class="fieldTitle"
+                >
+                  País de Origen:
+                </h4>
+                <img
+                  alt="Ecuador flag"
+                  class="flag"
+                  src="test-file-stub"
+                  title="Ecuador"
+                />
+              </div>
+            </div>
+            <div
+              data-testid="franchise-roi"
+            >
+              <div
+                class="field"
+              >
+                <h4
+                  class="fieldTitle"
+                >
+                  Tiempo ROI:
+                </h4>
+                <p
+                  class="fieldContent"
+                >
+                  2 años
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="field"
+            data-testid="franchise-investment"
+            style="flex-direction: column; justify-content: flex-end; align-content: flex-end; flex-grow: 1;"
+          >
+            <h4
+              class="priceTitle"
+            >
+              Inversión Aproximada Desde
+            </h4>
+            <p
+              class="price"
+            >
+              $ 900,000
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

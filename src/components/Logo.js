@@ -16,29 +16,34 @@ import Img from 'gatsby-image'
  * https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1d-6bc4-4202-afb2-38326d91bd05
  */
 
-const Logo = ({ imgName }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allImageSharp {
-          edges {
-            node {
-              fluid {
-                ...GatsbyImageSharpFluid
-                originalName
-              }
-            }
+const query = graphql`
+  query {
+    allImageSharp {
+      edges {
+        node {
+          fluid {
+            ...GatsbyImageSharpFluid
+            originalName
           }
         }
       }
-    `}
+    }
+  }
+`
+
+const Logo = ({ imgName }) => (
+  <StaticQuery
+    query={query}
     render={data => {
       const image = data.allImageSharp.edges.find(
         edge => edge.node.fluid.originalName === imgName
       )
 
       if (!image) {
-        return null
+        const image = data.allImageSharp.edges.find(
+          edge => edge.node.fluid.originalName === 'franchise.png'
+        )
+        return <Img fluid={image.node.fluid} />
       }
 
       return <Img fluid={image.node.fluid} />

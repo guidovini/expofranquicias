@@ -3,7 +3,7 @@
 .container {
   margin-bottom: 3rem;
   margin-right: 3rem;
-  padding: 1.25rem;
+  // padding: 1.25rem; // PADDING BOX
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,9 @@
   // align-items: flex-end;
   // max-width: 25rem; // 25 * 16 = 400px
   width: 22rem; // 25 * 16 = 400px
+
+  border-radius: 1.5rem;
+  overflow: hidden;
 
   box-shadow: 0 1rem 2rem rgba(#000, 0.15);
   transition: all 0.2s;
@@ -64,8 +67,9 @@
 }
 
 .image-box {
-  margin-bottom: 1.25rem;
+  // margin-bottom: 1.25rem; // PADDING BOX
   min-height: 20rem;
+  // border-radius: 1.5rem;
 
   display: flex;
   flex-direction: column;
@@ -74,6 +78,8 @@
 }
 
 .data {
+  padding: 1.25rem; // PADDING BOX
+
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -82,15 +88,19 @@
 .field {
   display: flex;
   align-items: center;
+  margin-bottom: 0.3rem;
 }
 
 .field-title {
+  font-size: 1.125rem;
+
   margin-right: 0.6rem;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .field-content {
-  font-weight: 400;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 .flag {
@@ -102,13 +112,14 @@
   font-weight: 400;
   font-size: 0.8rem;
   letter-spacing: 0.15rem;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
 }
 
 .price {
   font-size: 1.8rem;
+  // font-family: 'Roboto';
   color: $primary-color;
-  // font-weight: 700;
+  // font-weight: 600;
 }
 
 .price-locations-title {
@@ -123,4 +134,61 @@
   font-size: 1.2rem;
   color: $dark;
   // font-weight: 700;
+}
+
+.category {
+  // position: absolute;
+  // // width: 100%;
+  // z-index: 999;
+
+  opacity: 0.95;
+
+  margin-bottom: 0.8rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.sub-category {
+  color: #eee;
+  background-color: $primary-color;
+  // color: $primary-color;
+  // background-color: #eee;
+
+  // border-style: solid;
+  // border-width: 0.5px;
+  border-radius: 0.5rem;
+
+  margin-bottom: 0.2rem;
+  padding: 0.2rem 1rem;
+
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1rem;
+  // letter-spacing: 0.15rem;
+
+  justify-self: flex-end;
+}
+
+.icon-data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: flex-start;
+
+  padding-bottom: 0.7rem;
+  border-bottom: #ccc solid 1px;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 0.5rem;
+}
+
+.label-data {
+  padding-top: 1.2rem;
 }

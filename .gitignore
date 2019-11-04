@@ -1,5 +1,6 @@
 .vscode
 docs/
+config/client_secret.json
 
 # Logs
 logs
@@ -56,6 +57,7 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.*
 
 # gatsby files
 .cache/

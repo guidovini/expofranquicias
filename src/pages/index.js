@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const IndexPage = () => (
   <Layout>
@@ -17,7 +17,7 @@ const IndexPage = () => (
             >
               Sitio Web para encontrar{' '}
               <strong style={{ fontWeight: '400' }}>
-                Franquicias Latinoamericanas
+                Franquicias Internacionales
               </strong>{' '}
               disponibles en Ecuador
             </h2>
@@ -56,7 +56,7 @@ const IndexPage = () => (
               }}
             >
               <p>Un servicio de: </p>
-              <br></br>
+              <br />
               <a href="http://www.ecuafranquicias.com" target="_blank">
                 <img src={require('../images/ecuafranquicias-logo.png')} />
               </a>

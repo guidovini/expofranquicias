@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
-import ControlBarStyles from './controlBar.module.scss'
+import toTitleCase from '../utils/toTitleCase'
+
+import controlBarStyles from './controlBar.module.scss'
 
 class ControlBar extends Component {
   componentDidMount() {
@@ -54,10 +56,13 @@ class ControlBar extends Component {
       >
         <option value="all">Todos</option>
         {countries.map(country => {
+          const countryToTitleCase = toTitleCase(country)
           return (
-            <option value={`${country}`} key={country}>
-              {country}
-            </option>
+            country && (
+              <option value={`${country}`} key={country}>
+                {countryToTitleCase}
+              </option>
+            )
           )
         })}
       </select>
@@ -80,7 +85,7 @@ class ControlBar extends Component {
 
   render() {
     return (
-      <div className="control-bar" id="myHeader">
+      <div className="control-bar" id="myHeader" data-testid="controlBar">
         <div
           className="field is-horizontal"
           // style={{ flexBasis: '16rem' }}
@@ -129,7 +134,7 @@ class ControlBar extends Component {
               e.preventDefault()
               this.props.resetControlBar()
             }}
-            className={ControlBarStyles.buttonTrash}
+            className={controlBarStyles.buttonTrash}
             // className={'delete is-medium'}
             title="Reiniciar opciones"
             // style={{ margin: '5px' }}
